@@ -1,0 +1,46 @@
+import React from 'react'
+import { useState, useEffect } from 'react';
+import "../styles/CarouselHome.css";
+import Consistency from '../imagenes/Constancy.png';
+import Perseverance from '../imagenes/Perseverance.png';
+import Focus from '../imagenes/Focus.png';
+
+function CarouselHome() {
+      const images = [
+        { src: Consistency, title: "Constancy", desc: "Build habits with small daily steps." },
+        { src: Perseverance, title: "Perseverance", desc: "Stay strong even when it's hard." },
+        { src: Focus, title: "Focus", desc: "Direct your energy to what truly matters." }
+      ];
+    
+      const [index, setIndex] = useState(0);
+    
+      //UseEffect change of card
+      useEffect(() => {
+        const timer = setInterval(() => {
+          setIndex((prev) => (prev + 1) % images.length);
+        }, 10000);
+        return () => clearInterval(timer);
+      }, [images.length]);
+    
+  return (
+    <div>
+
+     {/* Carousel */}
+      <div className='carousel'>
+        <div className='card'>
+          <img src={images[index].src} alt={images[index].title} />
+          <h3>{images[index].title}</h3>
+          <p>{images[index].desc}</p>
+        </div>
+
+        {/* Carousel Buttons */}
+        <button className='prev' onClick={() => setIndex((index - 1 + images.length) % images.length)}>❮</button>
+        <button className='next' onClick={() => setIndex((index + 1) % images.length)}>❯</button>
+      </div>
+
+
+    </div>
+  )
+}
+
+export default CarouselHome

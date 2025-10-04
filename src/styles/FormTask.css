@@ -1,0 +1,131 @@
+/* container of title */
+.container_TitleForm {
+  text-align: center;
+  margin: 30px 0 15px;
+}
+.titleForm {
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #d6e6ff;
+  text-shadow: 0 0 8px #0ff, 0 0 18px #7700ff;
+  animation: glowPulse 4s infinite alternate;
+}
+/* animation container form Task */
+@keyframes glowPulse {
+  from { text-shadow: 0 0 8px #0ff, 0 0 18px #7700ff; }
+  to   { text-shadow: 0 0 14px #7700ff, 0 0 28px #0ff; }
+}
+
+
+/* unique form container  */
+.container_FormTask {
+  width: 460px;
+  margin: 45px auto;
+  padding: 38px 26px;
+  background: rgba(5, 8, 15, 0.95); /* más oscuro */
+  border: 2px solid #222;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 12px rgba(255, 0, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+.container_FormTask:hover {
+  transform: scale(1.01);
+}
+
+/* Animación de borde neón */
+.container_FormTask::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(120deg, #00f9ff, #7700ff, #00f9ff);
+  background-size: 400% 400%;
+  animation: borderShift 8s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 0;
+  opacity: 0.18; 
+}
+
+@keyframes borderShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container_FormTask > * {
+  position: relative;
+  z-index: 1;
+}
+.titleTask {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 22px;
+  color: #cfdfff;
+  text-shadow: 0 0 5px #0ff, 0 0 12px #7700ff;
+}
+/*container input and label*/
+.containerInputLabelTask {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.labelTask {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #6fe1ff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.inputTask {
+  padding: 12px 15px;
+  border: 1px solid #111;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #f0f0f0;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: inset 0 0 8px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.inputTask:focus {
+  outline: none;
+  border: 1px solid #7700ff;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 10px 2px #7700ff, inset 0 0 10px #0ff;
+  transform: scale(1.02);
+}
+
+
+/* container btnForm Task */
+.container_BtnFormTask {
+  text-align: center;
+  margin-top: 28px;
+}
+.inputBtnFormTask {
+  padding: 13px 48px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border-radius: 28px;
+  border: none;
+  background: linear-gradient(135deg, rgb(23, 4, 90), #000000);
+  background-size: 250% 250%;
+  color: #00ffff;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: inset 0 0 6px #ffffff;
+  transition: all 0.3s ease, transform 0.25s ease;
+}
+
+.inputBtnFormTask:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 20px #7700ff, inset 0 0 10px #0ff;
+  transform: scale(1.07);
+}

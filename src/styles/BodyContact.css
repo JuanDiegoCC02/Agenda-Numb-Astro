@@ -1,0 +1,102 @@
+/* Container Information of the Page */
+.containerInfoPage {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+/* Title of the Page */
+.titlePage {
+  text-align: center;
+  margin-bottom: 15px;
+
+   font-size: 3rem;
+  text-shadow: 0 0 10px #7a00ff, 0 0 20px #c700ff;
+}
+/* Information Page */
+.infoPage {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-align: justify;
+}
+
+
+/* container iinformation contact us */
+.container_AllInfoContact{
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+/* container title Contact Us */
+.containerTitleC {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+/* Title Contact Us */
+.titleContact {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #ffffff, #00039b);
+  -webkit-background-clip: text;    /*  Degradation in title  */
+  -webkit-text-fill-color: transparent;
+}
+
+/* container Contact */
+.containerInfoContact {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.titlePhone{
+  font-size: 1.4rem;
+  color: #00a0fde7;
+  margin-bottom: 5px;
+}
+.titleEmail {
+  font-size: 1.4rem;
+  color: #00a0fde7;
+  margin-bottom: 5px;
+}
+.phone{
+   font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.email {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* container Logo */
+.containerLogo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.containerLogo img {
+  max-width: 200px;
+  filter: drop-shadow(0px 0px 10px #00f6ff);
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+/* Animación rebote img */
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

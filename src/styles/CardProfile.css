@@ -1,0 +1,155 @@
+/* Contenedor principal */
+.profileCard {
+  position: relative;
+  background: radial-gradient(circle at top left, rgba(60, 0, 90, 0.8), rgba(10, 10, 30, 0.95));
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 380px;
+  margin: 40px auto;
+  color: #e0e7ff;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(140, 50, 255, 0.3), 0 0 50px rgba(0, 200, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+/* Borde brillante animado */
+.profileCard::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(130deg, #00e5ff, #9d4edd, #ff00c8, #00e5ff);
+  background-size: 400% 400%;
+  animation: borderGlow 12s linear infinite;
+  z-index: 0;
+  filter: blur(6px);
+  opacity: 0.6;
+}
+
+/* Para que el contenido no se tape */
+.profileCard * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título */
+.containerTitleProfile{
+text-align: center;
+margin: 20px;
+}
+.titleProfile {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00eaff;
+  text-shadow: 0 0 12px rgba(0, 200, 255, 0.8), 0 0 30px rgba(170, 0, 255, 0.6);
+  letter-spacing: 1.5px;
+}
+
+/* Datos del perfil */
+.containerDataProfile {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  text-align: center;
+}
+
+.containerDataProfile:hover {
+  transform: translateX(5px);
+  background: rgba(0, 200, 255, 0.1);
+}
+
+/* Etiquetas */
+.dataProfile {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #a78bfa;
+  display: block;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Valor del usuario */
+.containerDataProfile br + * {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+/* --- Animaciones --- */
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Contenedor centrado */
+.containerCounterTaskProfile {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* Caja del contador */
+.counterTasksProfile {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00eaff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  background: rgba(15, 8, 40, 0.6);
+  border: 1px solid rgba(0, 200, 255, 0.4);
+  backdrop-filter: blur(6px);
+  
+  box-shadow: 
+    0 0 15px rgba(0, 200, 255, 0.4),
+    0 0 30px rgba(160, 50, 255, 0.2);
+
+  position: relative;
+  overflow: hidden;
+  animation: floatCounter 4s ease-in-out infinite;
+}
+
+/* Animación de brillo galáctico en el borde */
+.counterTasksProfile::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #00e5ff, #9d4edd, #ff00c8, #00e5ff);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: neonFlow 8s linear infinite;
+  opacity: 0.6;
+  filter: blur(8px);
+}
+
+/* Animaciones */
+@keyframes neonFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatCounter {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}

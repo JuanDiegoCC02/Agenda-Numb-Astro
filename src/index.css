@@ -1,0 +1,17 @@
+/* Fondo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(ellipse at top left, #071637, #000000f7, #071637);
+  background-size: 300% 300%;
+  animation: bgShift 20s ease infinite;
+  color: #ffffff;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

@@ -1,0 +1,20 @@
+/* Título */
+.container_TitleHome {
+  text-align: center;
+  margin-top: 50px;
+}
+.titleHome {
+  font-size: 3rem;
+  text-shadow: 0 0 10px #7a00ff, 0 0 20px #c700ff;
+}
+
+/* Descripción */
+.container_InfoSite {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.infoSite {
+  font-size: 1.2rem;
+  color: #ccc;
+}
