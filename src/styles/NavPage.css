@@ -1,25 +1,32 @@
 .navbar {
   background: #0b0e1d;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   box-shadow: 0 2px 10px #00f9ff30;
   font-family: 'Orbitron', sans-serif;
-  position: sticky;
+  position: relative; /* necesario para centrar el menú */
   top: 0;
   z-index: 1000;
 }
 
 .navbar__logo img {
-  border-radius: 40px ;
+  border-radius: 40px;
   width: 150px;
   filter: drop-shadow(0 0 4px #00f9ff80);
   transition: transform 0.3s;
+  margin-right: 40px; /* separa el logo del menú */
 }
 
 .navbar__logo img:hover {
   transform: scale(1.05);
+}
+
+/* 🔹 Centrar el menú horizontalmente */
+.containerNav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar__links {
@@ -62,11 +69,11 @@
   width: 100%;
 }
 
-/* 🔁 Responsive (opcional para móviles) */
+/* 🔁 Responsive (móviles) */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px;
   }
 
@@ -78,5 +85,12 @@
 
   .navbar__logo img {
     width: 120px;
+    margin: 0;
+  }
+
+  .containerNav {
+    position: static;
+    transform: none;
+    margin-top: 15px;
   }
 }

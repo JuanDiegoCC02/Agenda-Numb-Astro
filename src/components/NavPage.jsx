@@ -13,16 +13,27 @@ function NavPage() {
         </Link>
       </div>
 
+      <div className='containerNav'>
       <ul className="navbar__links">
-        
+        {
+        !localStorage.getItem("TypeUser") &&(
+            <>
         <li><Link to="/register">Register</Link></li>
         <li><Link to="/login">Log In</Link></li>
+        </>
+        )}
         <li><Link to="/">Home</Link></li>
         <li><Link to="/contact">Contact</Link></li>
+        {
+          localStorage.getItem("TypeUser") &&(
+        <>
         <li><Link to="/formTasks">Tasks Form</Link></li>
         <li><Link to="/news">News</Link></li>
         <li><Link to="/profile">Profile</Link></li>
+        </>
+        )}
       </ul>
+      </div>
     </nav>
    </div>
   )

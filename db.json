@@ -6,6 +6,16 @@
       "lastName": "Corella Camacho",
       "email": "JDCamacho@gmai.com",
       "id": "2763"
+    },
+    {
+      "id": "2245",
+      "userName": "Lil",
+      "firstName": "Lil",
+      "lastName": "Kill",
+      "email": "KillLil@gmail.com",
+      "birthday": "10/14/2000",
+      "password": "1234",
+      "typeUser": "User"
     }
   ],
   "tasks": [
