@@ -1,16 +1,16 @@
 import React from 'react'
 import NavPage from '../components/NavPage'
-import FormTask from '../components/FormTask'
+import TaskForm from '../components/TaskForm'
 import FooterPage from '../components/FooterPage'
 
-function FormTasks() {
+function TaskFormPag() {
   return (
     <div>
         <nav>
         <NavPage/>
         </nav>
         <main>
-        <FormTask/>
+        <TaskForm/>
         </main>
         <footer>
         <FooterPage/>
@@ -19,4 +19,4 @@ function FormTasks() {
   )
 }
 
-export default FormTasks
+export default TaskFormPag

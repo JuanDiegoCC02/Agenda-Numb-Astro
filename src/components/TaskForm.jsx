@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import { postTasks } from '../services/llamadosTasks.js'
 import  "../styles/FormTask.css"
 
-function FormTask() {
+function TaskForm() {
   const [Title, setTitle]=useState("")
+  const [TaskType, setTaskType]=useState("")
   const [Description, setDescription]=useState("")
   const [TaskDay, setTaskDay]=useState("")
 
   function title(e) {
     setTitle(e.target.value)
+  }
+  function  taskType(e) {
+    setTaskType(e.target.value)
   }
   function description(e) {
     setDescription(e.target.value)
@@ -16,12 +20,14 @@ function FormTask() {
   function taskDay(e) {
     setTaskDay(e.target.value)
   }
+
   function createTask(e) {
-    if (!Title || !Description || !TaskDay) {
+    if (!Title || !TaskType || !Description || !TaskDay) {
       console.log ("Complete all fields to create the task")
     } else {
-      postTasks(Title, Description, TaskDay)
+      postTasks(Title, TaskType, Description, TaskDay)
       setTitle("")
+      setTaskType("")
       setDescription("")
       setTaskDay("")
       console.log("Task Created")
@@ -41,6 +47,19 @@ function FormTask() {
            <label className='labelTask' htmlFor="">Title</label>
            <input className='inputTask' type="text" onChange={title} value={Title}/>
           </div>
+
+          <div>
+            <label htmlFor="">Task Type</label><br />
+            <select name="TaskType" id="" onChange={taskType}>
+              <option value="">Select the task type</option>
+              <option value="personal">Personal</option>
+              <option value="work">Work</option>
+              <option value="hobbie">Hobbie</option>
+              <option value="study">Study</option>
+              <option value="other">Other</option>
+            </select>
+          </div><br />
+
           <div className='containerInputLabelTask'>
            <label className='labelTask' htmlFor="">Description</label>
            <input className='inputTask' type="text" onChange={description} value={Description}/>
@@ -60,4 +79,4 @@ function FormTask() {
   )
 }
 
-export default FormTask
+export default TaskForm

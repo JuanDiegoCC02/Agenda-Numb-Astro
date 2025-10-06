@@ -27,7 +27,7 @@ function NavPage() {
         {
           localStorage.getItem("TypeUser") &&(
         <>
-        <li><Link to="/formTasks">Tasks Form</Link></li>
+        <li><Link to="/taskForm">Task Form</Link></li>
         <li><Link to="/news">News</Link></li>
         <li><Link to="/profile">Profile</Link></li>
         </>

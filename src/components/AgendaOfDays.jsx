@@ -113,13 +113,11 @@ function deleteBtn(id) {
               {tasksByDate[date].map((task) => (
 
                 <li className='liByTasksDate' key={task.id}>
-                  <h3 className='titleTasks'
-                      style={{ textDecoration: task.completed ? "line-through" : "none", 
-                      color: task.completed ? "black" : "yellow"
-                    }}
-                    >
-                  {task.title}
+                  <h3 className='titleTasks'> 
+                    {task.title}
                   </h3>
+
+                  <h5> {task.taskType} </h5>
 
                   <p className='descriptionTasks'>{task.description}</p>
 

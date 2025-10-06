@@ -4,7 +4,7 @@ import Home from '../pages/Home';
 import Register from '../pages/Register'
 import LogIn from '../pages/LogIn';
 import ContactUs from '../pages/ContactUs';
-import FormTasks from '../pages/FormTasks';
+import TaskFormPag from '../pages/TaskFormPag';
 import News from '../pages/News';
 import Profile from '../pages/Profile';
 
@@ -16,7 +16,7 @@ function Routing() {
              <Route path = '/login' element = {<LogIn/>}/> 
              <Route path = '/' element = {<Home/>}/> 
              <Route path = '/contact' element = {<ContactUs/>}/>
-             <Route path = '/formTasks' element = {<FormTasks/>}/>  
+             <Route path = '/taskForm' element = {<TaskFormPag/>}/>  
              <Route path = '/news' element = {<News/>}/> 
              <Route path = '/profile' element = {<Profile/>}/> 
 
