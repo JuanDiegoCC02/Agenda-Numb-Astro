@@ -23,15 +23,15 @@ async function getTasks() {
 
 //////////LLAMADO POST//////////
 
-async function postTasks(title, taskType, description, taskDay) {
+async function postTasks(title, taskType, description, taskDay, userName) {
     try {
      
         const taskData = { 
             title,
             taskType,
             description,
-            taskDay
-        
+            taskDay,
+            userName
         };
 
 

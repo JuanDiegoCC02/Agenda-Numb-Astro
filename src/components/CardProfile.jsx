@@ -10,7 +10,8 @@ function CardProfile() {
 
   const [user, setUser] = useState(null);
   const IDLogueado = localStorage.getItem('ID'); 
-  const completedTaskCount = tasks.filter(task => task.completed).length;
+  const personLog = localStorage.getItem("Username")
+  
 
   const [getEditSpaces, setGetEditSpaces]= useState(false)
   
@@ -70,13 +71,18 @@ async function editBtn(id) {
         console.error("Failed id User:", error);
       }
     };
+    
 
       const fetchTasks = async () => {
         try {
           const response = await fetch("http://localhost:3000/tasks");
           const data = await response.json();
-          setTasks(data);
+          const personTasks = data.filter(task => task.userName === personLog)
+          const taskCompleted = personTasks.filter((t)=> t.completed === true)
+          setTasks(taskCompleted);
           setLoading(false);
+          console.log(tasks)
+
         } catch (error) {
           console.error("Error fetch tasks", error);
           setLoading(false);
@@ -119,7 +125,7 @@ async function editBtn(id) {
 
       <div className='containerCounterTaskProfile'>
       <p className='counterTasksProfile'>
-       Tasks Completed: {completedTaskCount} 
+       Tasks Completed: {tasks.length} 
       </p>
 
       </div>

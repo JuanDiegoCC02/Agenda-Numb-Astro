@@ -1,28 +1,24 @@
 import React from 'react'
-
 import NavPage from '../components/NavPage'
-import BodyNews from '../components/BodyNews'
 import FooterPage from '../components/FooterPage'
-import AgendaOfDays from '../components/AgendaOfDays'
+import GoalsOfStars from '../components/GoalsOfStars'
 
-
-
-function News() {
+function StarsMapPag() {
   return (
-   <div>
+    <div>
+
         <nav>
         <NavPage/>
         </nav>
         <main>
-        <BodyNews/>
-        <AgendaOfDays/>
-        
+        <GoalsOfStars/>
         </main>
         <footer>
         <FooterPage/>
         </footer>
+
     </div>
   )
 }
 
-export default News
+export default StarsMapPag

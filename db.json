@@ -16,22 +16,53 @@
       "birthday": "10/14/2000",
       "password": "1234",
       "typeUser": "User"
+    },
+    {
+      "id": "b76d",
+      "userName": "JD",
+      "firstName": "Juan Diego",
+      "lastName": "Corella Camacho",
+      "email": "JD16@gmail.com",
+      "birthday": "16/10/2004",
+      "password": "444",
+      "typeUser": "User"
     }
   ],
   "tasks": [
     {
-      "id": "d4c1",
-      "title": "Hello world",
-      "description": "Will you help me with one work in this world?",
-      "taskDay": "0001-01-01",
-      "completed": false
+      "id": "83fd",
+      "title": "Salir a Correr",
+      "taskType": "personal",
+      "description": "Correr al menos 1k a 3k ",
+      "taskDay": "2025-10-07",
+      "userName": "JD",
+      "completed": true
     },
     {
-      "id": "8692",
-      "title": "ob",
+      "id": "1072",
+      "title": "Codear",
+      "taskType": "work",
+      "description": "Codear la pagina de numb-astro",
+      "taskDay": "2025-10-08",
+      "userName": "JD"
+    },
+    {
+      "id": "29c6",
+      "title": "Dibujar",
       "taskType": "hobbie",
-      "description": "ob",
-      "taskDay": "2025-10-10"
+      "description": "Dibujar en libreta pequeña el boceto de estrellas.",
+      "taskDay": "2025-10-07",
+      "userName": "Lil",
+      "completed": true
+    },
+    {
+      "id": "594a",
+      "title": "Leer",
+      "taskType": "hobbie",
+      "description": "Leer 10 a 15 páginas en un dia",
+      "taskDay": "2025-10-08",
+      "userName": "Lil",
+      "completed": true
     }
   ]
 }

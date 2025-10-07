@@ -3,16 +3,16 @@ import React from 'react'
 
 
 
-function BodyNews() {
+function BodyNew() {
 
   return (
     <div>
     <div>
-        <h2>Body News</h2>
+        <h2>Body New</h2>
     </div>
 
     </div>
   )
 }
 
-export default BodyNews
+export default BodyNew

@@ -51,16 +51,21 @@ function deleteBtn(id) {
       try {
         const response = await fetch("http://localhost:3000/tasks");
         const data = await response.json();
-        setTasks(data);
+
+        const personLog = localStorage.getItem("Username")
+        const personTasks = data.filter(task => task.userName === personLog)
+        setTasks(personTasks);
         setLoading(false);
+
       } catch (error) {
         console.error("Error fetch tasks", error);
         setLoading(false);
       }
     };
-
     fetchTasks();
   }, [reload]);
+
+
 
   // Change the Task State
   const changeTaskState = async (id, completed) => {
@@ -70,6 +75,7 @@ function deleteBtn(id) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ completed: !completed })
       });
+
 
       // change Lc state 
       setTasks(prevTasks =>
@@ -83,6 +89,7 @@ function deleteBtn(id) {
   if (loading){ return <p>loading task...</p>;
   }else if (tasks.length === 0){ return <p>There are no registered tasks.</p>;}
 
+
   // Assigning Tasks by date
   const tasksByDate = tasks.reduce((acc, task) => {
     if (!acc[task.taskDay]) {
@@ -94,6 +101,7 @@ function deleteBtn(id) {
 
   // Count tasks completed
   const completedCount = tasks.filter(task => task.completed).length;
+
 
   return (
     <div>

@@ -5,8 +5,9 @@ import Register from '../pages/Register'
 import LogIn from '../pages/LogIn';
 import ContactUs from '../pages/ContactUs';
 import TaskFormPag from '../pages/TaskFormPag';
-import News from '../pages/News';
+import New from '../pages/New';
 import Profile from '../pages/Profile';
+import StarsMapPag from '../pages/StarsMapPag';
 
 function Routing() {
   return (
@@ -17,8 +18,10 @@ function Routing() {
              <Route path = '/' element = {<Home/>}/> 
              <Route path = '/contact' element = {<ContactUs/>}/>
              <Route path = '/taskForm' element = {<TaskFormPag/>}/>  
-             <Route path = '/news' element = {<News/>}/> 
+             <Route path = '/new' element = {<New/>}/> 
              <Route path = '/profile' element = {<Profile/>}/> 
+
+             <Route path = '/starsMap' element = {<StarsMapPag/>}/> 
 
      </Routes>
    </Router>

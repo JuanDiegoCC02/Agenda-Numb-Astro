@@ -7,6 +7,7 @@ function TaskForm() {
   const [TaskType, setTaskType]=useState("")
   const [Description, setDescription]=useState("")
   const [TaskDay, setTaskDay]=useState("")
+  const [reload, setReload]= useState(false)
 
   function title(e) {
     setTitle(e.target.value)
@@ -25,12 +26,13 @@ function TaskForm() {
     if (!Title || !TaskType || !Description || !TaskDay) {
       console.log ("Complete all fields to create the task")
     } else {
-      postTasks(Title, TaskType, Description, TaskDay)
+      postTasks(Title, TaskType, Description, TaskDay, localStorage.getItem("Username"))
       setTitle("")
       setTaskType("")
       setDescription("")
       setTaskDay("")
       console.log("Task Created")
+      setReload(!reload)
     }
   }
 
