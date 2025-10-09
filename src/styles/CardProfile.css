@@ -153,3 +153,48 @@ margin: 20px;
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
+
+
+.containerEditProfile{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+.btnEditProfile{
+  width: 65px;
+  padding: 6px 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 14px;
+  border: 1px solid rgba(90, 90, 90, 0.7);
+  background: linear-gradient(135deg, #161616, #0b0b0b);
+  color: #ffffff;
+  cursor: pointer;
+  
+  font-family: 'Orbitron', sans-serif;
+  margin: 5px;
+
+}
+.btnEditProfile:hover{
+ box-shadow: 0 0 8px #3a8dff;
+  border-color: #3a8dff;
+
+}
+.spaceEditProfile {
+  display: block;
+  width: 2  0%;
+  margin: 8px auto;
+  padding: 9px;
+  border-radius: 10px;
+  border: 1px solid #5a5a5a;
+  background: rgba(15, 15, 25, 0.8);
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+}
+
+.spaceEditProfile:focus {
+  outline: none;
+  border-color: #00eaff;
+  box-shadow: 0 0 8px #00f9ff80;
+}

@@ -110,7 +110,7 @@ async function editBtn(id) {
       <div className='containerDataProfile'><strong className='dataProfile'>Last Name</strong> <br /> {user.lastName}</div>
       <div className='containerDataProfile'><strong className='dataProfile'>Email</strong> <br /> {user.email}</div>
 
-      <div>
+      <div className='containerEditProfile'>
         <button className='btnEditProfile' onClick={() => setGetEditSpaces(!getEditSpaces)}>Edit</button> <br />
         {getEditSpaces &&
         <>
@@ -118,17 +118,17 @@ async function editBtn(id) {
         <input type="text" onChange={newFirstname} placeholder='Firstname' className='spaceEditProfile'/>
         <input type="text" onChange={newLastname} placeholder='Lastname' className='spaceEditProfile'/>
         <input type="text" onChange={newEmail} placeholder='Email' className='spaceEditProfile'/>
-        <button onClick={() => editBtn(user.id)}>Update</button>
+        <button className='confirmEdit' onClick={() => editBtn(user.id)}>Update</button>
         </>
         }
       </div>
 
       <div className='containerCounterTaskProfile'>
       <p className='counterTasksProfile'>
-       Tasks Completed: {tasks.length} 
+       Stars: {tasks.length} 
       </p>
-
       </div>
+
     </div>
   )
 }

@@ -50,17 +50,17 @@ function TaskForm() {
            <input className='inputTask' type="text" onChange={title} value={Title}/>
           </div>
 
-          <div>
-            <label htmlFor="">Task Type</label><br />
-            <select name="TaskType" id="" onChange={taskType}>
-              <option value="">Select the task type</option>
-              <option value="personal">Personal</option>
-              <option value="work">Work</option>
-              <option value="hobbie">Hobbie</option>
-              <option value="study">Study</option>
-              <option value="other">Other</option>
+          <div className='containerInputLabelTask'>
+            <label className='labelTask' htmlFor="">Task Type</label>
+            <select className='selectTaskForm' name="TaskType" id="" onChange={taskType}>
+              <option className='optionTaskForm' value="">Select the task type</option>
+              <option className='optionTaskForm' value="Personal">Personal</option>
+              <option className='optionTaskForm' value="Work">Work</option>
+              <option className='optionTaskForm' value="Hobbie">Hobbie</option>
+              <option className='optionTaskForm' value="Study">Study</option>
+              <option className='optionTaskForm' value="Other">Other</option>
             </select>
-          </div><br />
+          </div>
 
           <div className='containerInputLabelTask'>
            <label className='labelTask' htmlFor="">Description</label>

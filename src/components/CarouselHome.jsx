@@ -13,14 +13,13 @@ function CarouselHome() {
       ];
     
       const [index, setIndex] = useState(0);
-    
-      //UseEffect change of card
-      useEffect(() => {
-        const timer = setInterval(() => {
-          setIndex((prev) => (prev + 1) % images.length);
-        }, 10000);
-        return () => clearInterval(timer);
-      }, [images.length]);
+      const prevCardHome = ()=>{
+        setIndex((index - 1 + images.length) % imgaenes.length)
+      }
+      const nextCardHome = ()=>{
+        setIndex((index + 1) % images.length)
+      }
+     
     
   return (
     <div>
@@ -34,8 +33,8 @@ function CarouselHome() {
         </div>
 
         {/* Carousel Buttons */}
-        <button className='prev' onClick={() => setIndex((index - 1 + images.length) % images.length)}>❮</button>
-        <button className='next' onClick={() => setIndex((index + 1) % images.length)}>❯</button>
+        <button className='prev' onClick={prevCardHome}> ❮</button>
+        <button className='next' onClick={nextCardHome}> ❯</button>
       </div>
 
 

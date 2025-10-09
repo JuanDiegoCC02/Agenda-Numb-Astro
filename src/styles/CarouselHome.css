@@ -32,14 +32,11 @@
   width: 210px;
   height: auto;
   border-radius: 10px;
-  filter: drop-shadow(0px 0px 12px #00e0ff);
+  filter: drop-shadow(0px 0px 12px #051d69);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.card img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0px 0px 18px #a855f7);
-}
+
 
 /* Títulos más sobrios */
 .card h3 {

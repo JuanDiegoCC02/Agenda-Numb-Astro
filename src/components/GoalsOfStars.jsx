@@ -26,7 +26,7 @@ function GoalsOfStars() {
   });
   return (
           <div className="goals-board">
-      <h2 className="goals-title">🌌 Galaxia de Tareas Completadas</h2>
+      <h2 className="goals-title">🌌 Star Map</h2>
 
       <div className="stars-container">
         {tasks.map((task) => (

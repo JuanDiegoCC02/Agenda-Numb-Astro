@@ -30,23 +30,6 @@
   ],
   "tasks": [
     {
-      "id": "83fd",
-      "title": "Salir a Correr",
-      "taskType": "personal",
-      "description": "Correr al menos 1k a 3k ",
-      "taskDay": "2025-10-07",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "1072",
-      "title": "Codear",
-      "taskType": "work",
-      "description": "Codear la pagina de numb-astro",
-      "taskDay": "2025-10-08",
-      "userName": "JD"
-    },
-    {
       "id": "29c6",
       "title": "Dibujar",
       "taskType": "hobbie",
@@ -63,6 +46,77 @@
       "taskDay": "2025-10-08",
       "userName": "Lil",
       "completed": true
+    },
+    {
+      "id": "93bc",
+      "title": "Programar",
+      "taskType": "Work",
+      "description": "Programar actualizaciones en el Get de la agenda de Numb Astro.",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "77d6",
+      "title": "Lectura",
+      "taskType": "Hobbie",
+      "description": "Leer más veces al día \"al menos 3 o 2 veces al día\".",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "ca02",
+      "title": "Limpiar Zapatos",
+      "taskType": "Personal",
+      "description": "Limpiar zapatatos sucios y zapatos usados entre semaana.",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "71f8",
+      "title": "Ayudar en la casa",
+      "taskType": "Other",
+      "description": "Ayudar a reparar ordenar y limpiar la casa.",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "02a3",
+      "title": "Investigación de Código",
+      "taskType": "Study",
+      "description": "Investigar y poner en práctica nuevos métodos y formas de cogido.",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "6106",
+      "title": "Regalo ",
+      "taskType": "Hobbie",
+      "description": "Crear regalo de origami y carta para regalo de cumpleaños.",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "d24c",
+      "title": "Clean Room",
+      "taskType": "Personal",
+      "description": "Room cleaning before friday.",
+      "taskDay": "2025-10-09",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "3e29",
+      "title": "Play soccer",
+      "taskType": "Hobbie",
+      "description": "Playing soccer with my brother's friend.",
+      "taskDay": "2025-10-09",
+      "userName": "JD"
     }
   ]
 }

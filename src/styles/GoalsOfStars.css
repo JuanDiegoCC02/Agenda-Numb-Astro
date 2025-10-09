@@ -14,7 +14,7 @@
   font-size: 1.8rem;
   letter-spacing: 2px;
   color: #9cd4ff;
-  text-shadow: 0 0 10px #4cc3ff, 0 0 20px #0099ff;
+  text-shadow: 0 0 10px #0f77ac, 0 0 20px #0004ff;
   margin-bottom: 20px;
 }
 
@@ -26,18 +26,19 @@
 
 .star {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: radial-gradient(circle, #fff, #8cdfff 30%, transparent 70%);
   border-radius: 50%;
   box-shadow: 0 0 10px #8cdfff, 0 0 20px #4cc3ff;
   cursor: pointer;
-  animation: blink 2s infinite ease-in-out;
+  animation: blink 3s infinite ease-in-out;
   transition: transform 0.3s;
 }
 
 .star:hover {
   transform: scale(1.5);
+  background-color: rgb(42, 42, 133);
   box-shadow: 0 0 25px #80e0ff, 0 0 50px #00bfff;
 }
 

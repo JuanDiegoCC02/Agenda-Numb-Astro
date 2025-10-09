@@ -7,8 +7,8 @@ function StarsMap({ goal, onClose }) {
       <div className="star-card" onClick={(e) => e.stopPropagation()}>
         <h3>{goal.title}</h3>
         <p><strong>Descripción:</strong> {goal.description}</p>
-        <p><strong>Fecha:</strong> {goal.date}</p>
-        <p><strong>Tipo:</strong> {goal.type}</p>
+        <p><strong>Fecha:</strong> {goal.taskDay}</p>
+        <p><strong>Tipo:</strong> {goal.taskType}</p>
         <button onClick={onClose}>Cerrar</button>
       </div>
     </div>

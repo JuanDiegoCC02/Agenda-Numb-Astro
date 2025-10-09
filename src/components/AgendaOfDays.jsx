@@ -125,34 +125,41 @@ function deleteBtn(id) {
                     {task.title}
                   </h3>
 
-                  <h5> {task.taskType} </h5>
+                  <h5 className='getTaskType'>Task Type: {task.taskType} </h5>
 
                   <p className='descriptionTasks'>{task.description}</p>
 
-                  <input type="checkbox" checked={task.completed}
-                    onChange={() => changeTaskState(task.id, task.completed)}
-                  />
+                 
 
-                  <div>
+                  <div className='containerBtnsED'>
+                   <label htmlFor="">Task Completed :</label>
+                  <input type="checkbox" checked={task.completed}
+                    onChange={() => changeTaskState(task.id, task.completed)}/> 
+
+
+                  <div className='containerBtnEdit'>
                     <button className='btnEditTask' 
-                    onClick={() => setSpacesForEdit(!spacesForEDit)}>Edit</button><br />
+                    onClick={() => setSpacesForEdit(!spacesForEDit)}>Edit</button>
                     {spacesForEDit &&
-                    <>
+                    <><br />
                     <input type="text" onChange={newDateTask} placeholder='Task Day' className='SpaceEditTask' />
                     <input type="text" onChange={newTitleTask} placeholder='Task Title' className='SpaceEditTask' />
                     <input type="text" onChange={newDescriptionTask} placeholder='Task Description' className='SpaceEditTask' />
                    <button className='confirmEdit' onClick={() => editBtn(task.id)}>Uptade</button>
                     </>
                     }
+
                   </div>
-                  <div>
+                  <div className='containerBtnDelete'>
                     <button className='btnDeleteTask' 
                     onClick={e => deleteBtn(task.id)}>Delete</button>
                   </div>
-
+                </div>
+             
                 </li>
               ))}
             </ul>
+               
           </div>
         ))}
       </div>
