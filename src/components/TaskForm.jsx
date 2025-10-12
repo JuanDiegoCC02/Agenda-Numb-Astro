@@ -40,7 +40,7 @@ function TaskForm() {
     <div>
       
        <div className='container_TitleForm'>
-        <h3 className='titleForm'>Form of Task</h3>
+        <h3 className='titleForm'>Task Form</h3>
        </div>
 
         <div className='container_FormTask'>

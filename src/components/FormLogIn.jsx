@@ -76,7 +76,7 @@ function FormLogIn() {
      </div>
 
         <div className='container_linkRegister'>
-            <a className='linkRegister' href="/register">Register</a>
+          <p>Not registered? </p>  <a className='linkRegister' href="/register">Register</a>
         </div>
 
     </div>

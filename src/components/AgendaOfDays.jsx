@@ -89,15 +89,18 @@ function deleteBtn(id) {
   if (loading){ return <p>loading task...</p>;
   }else if (tasks.length === 0){ return <p>There are no registered tasks.</p>;}
 
+const sortedTasks = [...tasks].sort((a, b) => new Date(b.taskDay) - new Date(a.taskDay));
+
 
   // Assigning Tasks by date
-  const tasksByDate = tasks.reduce((acc, task) => {
-    if (!acc[task.taskDay]) {
-      acc[task.taskDay] = [];
-    }
-    acc[task.taskDay].push(task);
-    return acc;
-  }, {});
+ const tasksByDate = sortedTasks.reduce((acc, task) => {
+  if (!acc[task.taskDay]) {
+    acc[task.taskDay] = [];
+  }
+  acc[task.taskDay].push(task);
+  return acc;
+}, {});
+
 
   // Count tasks completed
   const completedCount = tasks.filter(task => task.completed).length;
@@ -112,6 +115,8 @@ function deleteBtn(id) {
         <p className='counterTasks'>
           Tasks Completed: {completedCount} / {tasks.length}
         </p>
+       
+          
 
         {Object.keys(tasksByDate).map((date) => (
           <div className='container_task' key={date}>

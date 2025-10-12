@@ -47,8 +47,9 @@ margin: 20px;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #00eaff;
-  text-shadow: 0 0 12px rgba(0, 200, 255, 0.8), 0 0 30px rgba(170, 0, 255, 0.6);
+color: #cfdfff;
+  text-shadow: 0 0 5px #0ff, 0 0 12px #7700ff;
+  font-family: 'Orbitron', sans-serif;
   letter-spacing: 1.5px;
 }
 

@@ -24,7 +24,7 @@ function BodyContact() {
 
     <div className='containerInfoContact'>
       <h4 className='titleEmail'>By Email</h4>
-      <p className='email'>NumbAstro_CR@gmail.com</p>
+      <p className='email'>NumbAstroCR@gmail.com</p>
     </div>
   </div>
 

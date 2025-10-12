@@ -36,12 +36,13 @@
 .titleAchievements {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #00eaff;
   letter-spacing: 2px;
-  text-shadow: 0 0 8px #00f6ff, 0 0 12px #6a00ff;
   margin-bottom: 15px;
   position: relative;
   z-index: 2;
+ color: #cfdfff;
+  text-shadow: 0 0 5px #0ff, 0 0 12px #7700ff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Lista */

@@ -8,6 +8,7 @@ import TaskFormPag from '../pages/TaskFormPag';
 import New from '../pages/New';
 import Profile from '../pages/Profile';
 import StarsMapPag from '../pages/StarsMapPag';
+import LootPag from '../pages/LootPag';
 
 function Routing() {
   return (
@@ -20,8 +21,9 @@ function Routing() {
              <Route path = '/taskForm' element = {<TaskFormPag/>}/>  
              <Route path = '/new' element = {<New/>}/> 
              <Route path = '/profile' element = {<Profile/>}/> 
-
              <Route path = '/starsMap' element = {<StarsMapPag/>}/> 
+
+             <Route path = '/loot' element = {<LootPag/>}/> 
 
      </Routes>
    </Router>

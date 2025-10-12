@@ -116,7 +116,58 @@
       "taskType": "Hobbie",
       "description": "Playing soccer with my brother's friend.",
       "taskDay": "2025-10-09",
-      "userName": "JD"
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "5fcb",
+      "title": "Programar",
+      "taskType": "Work",
+      "description": "ReEstructuracion de logica de numb astro Home",
+      "taskDay": "2025-10-10",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "5970",
+      "title": "Partido de Volley",
+      "taskType": "Hobbie",
+      "description": "Partido de volley de la familia",
+      "taskDay": "2025-10-11",
+      "userName": "JD",
+      "completed": true
+    }
+  ],
+  "memoryStars": [
+    {
+      "id": 1,
+      "title": "Inner Strength",
+      "description": "The only way to do great work is to love what you do. — Steve Jobs",
+      "achieved": false
+    },
+    {
+      "id": 2,
+      "title": "The Power of Effort",
+      "description": "Don't count the days, make the days count. — Muhammad Ali",
+      "achieved": false
+    },
+    {
+      "id": 3,
+      "title": "Infinite Consistency",
+      "description": "It's not that I'm so smart, it's just that I stay with problems longer. — Albert Einstein",
+      "achieved": false
+    },
+    {
+      "id": 4,
+      "title": "Courage to Begin",
+      "description": "It always seems impossible until it’s done. — Nelson Mandela",
+      "achieved": false
+    },
+    {
+      "id": 5,
+      "title": "Light of Curiosity",
+      "description": "Nothing in life is to be feared, it is only to be understood. — Marie Curie",
+      "achieved": false
     }
   ]
 }

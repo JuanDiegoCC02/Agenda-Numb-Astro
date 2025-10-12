@@ -105,7 +105,7 @@ function register(e) {
       </div>
 
       <div className='container_linkLogIn'>
-        <a className='linkLogIn' href="/login">Log In</a>
+       <p>Are you already registered?</p> <a className='linkLogIn' href="/login">Log In</a>
       </div>
 
     </div>

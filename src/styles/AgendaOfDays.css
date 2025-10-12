@@ -15,10 +15,11 @@
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 30px;
-  color: #c8faff;
-  letter-spacing: 2px;
+  color: #cfdfff;
+  text-shadow: 0 0 5px #0ff, 0 0 12px #7700ff;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 10px #00d9ff70;
+  letter-spacing: 2px;
+ 
 }
 
 /* ContainerTask */
