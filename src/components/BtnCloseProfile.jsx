@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import "../styles/BtnCloseProfile.css"
 
 function BtnCloseProfile() {
     const navigate = useNavigate()

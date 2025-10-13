@@ -44,16 +44,17 @@ function NavPage() {
     {
       localStorage.getItem("TypeUser") &&
       <div>
-       <button className='' onClick={()=> setOptions(!options)}> <img src={UserConfg} alt="" width={20} height={25} /> </button>
+       <button className='btnAjustes' onClick={()=> setOptions(!options)}> <img src={UserConfg} alt="" width={20} height={25} /> </button>
       {
       options &&
      <>
-       <ul>
-        <li><Link to="/profile">Profile</Link></li>
+     <div className='containerBtnAjustes'>
+       <ul className='ulBtnAjustes'>
+        <li className='liBtnAjustes'><Link to="/profile">Profile</Link></li>
 
-         <li><BtnCloseProfile/></li>
-       
-           </ul>
+         <li className='liBtnAjustes'><BtnCloseProfile/></li>
+       </ul>
+      </div>
           </>
         }
       </div>

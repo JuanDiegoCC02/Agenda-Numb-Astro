@@ -176,4 +176,38 @@
  
 }
 
+/*PRUEBAS NAV FILTER/TASKS DISEÑO ESTRUCTURA Y PRUBEAS*/
+.containerNavTasks {
+  margin: 15px 0 25px;
+  text-align: center;
+}
 
+.ulNavTasks {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 0;
+}
+
+.liNavTasks {
+  color: #b6f6ff;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 14px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.liNavTasks:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+.activeNav {
+  background: rgba(0, 255, 255, 0.25);
+  color: #00f9ff;
+  font-weight: 600;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.4);
+}

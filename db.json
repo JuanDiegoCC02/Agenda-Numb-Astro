@@ -136,35 +136,62 @@
       "taskDay": "2025-10-11",
       "userName": "JD",
       "completed": true
+    },
+    {
+      "id": "df95",
+      "title": "Casa",
+      "taskType": "Personal",
+      "description": "Reparaciones",
+      "taskDay": "2025-10-12",
+      "userName": "Lil",
+      "completed": true
+    },
+    {
+      "id": "ea40",
+      "title": "Programacion",
+      "taskType": "Work",
+      "description": "Pruebas del codigo de estructura CMP",
+      "taskDay": "2025-11-15",
+      "userName": "Lil",
+      "completed": true
+    },
+    {
+      "id": "343c",
+      "title": "Cuarto",
+      "taskType": "Personal",
+      "description": "Orden del cuarto y Limpieza",
+      "taskDay": "2025-10-13",
+      "userName": "Lil",
+      "completed": true
     }
   ],
   "memoryStars": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Inner Strength",
       "description": "The only way to do great work is to love what you do. — Steve Jobs",
       "achieved": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "The Power of Effort",
       "description": "Don't count the days, make the days count. — Muhammad Ali",
       "achieved": false
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Infinite Consistency",
       "description": "It's not that I'm so smart, it's just that I stay with problems longer. — Albert Einstein",
       "achieved": false
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Courage to Begin",
       "description": "It always seems impossible until it’s done. — Nelson Mandela",
       "achieved": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Light of Curiosity",
       "description": "Nothing in life is to be feared, it is only to be understood. — Marie Curie",
       "achieved": false

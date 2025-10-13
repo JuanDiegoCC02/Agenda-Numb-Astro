@@ -13,6 +13,7 @@ function AgendaOfDays() {
   const [editDateTask, setEditDateTask]= useState("")
   const [editTitleTask, setEditTitleTask]= useState("")
   const [editDescriptionTask, setEditDescriptionTask]= useState("")
+  const [filterType, setFilterType]= useState("All")
 
 
 function newDateTask(e) {
@@ -77,7 +78,7 @@ function deleteBtn(id) {
       });
 
 
-      // change Lc state 
+      // Change Lc state 
       setTasks(prevTasks =>
         prevTasks.map(task => task.id === id ? { ...task, completed: !task.completed } : task));
         console.log ("Task state Change")
@@ -89,7 +90,13 @@ function deleteBtn(id) {
   if (loading){ return <p>loading task...</p>;
   }else if (tasks.length === 0){ return <p>There are no registered tasks.</p>;}
 
-const sortedTasks = [...tasks].sort((a, b) => new Date(b.taskDay) - new Date(a.taskDay));
+  const filteredTasks =
+  filterType === "All"
+    ? tasks
+    : tasks.filter(task => task.taskType === filterType);
+
+
+  const sortedTasks = [...filteredTasks].sort((a, b) => new Date(b.taskDay) - new Date(a.taskDay));
 
 
   // Assigning Tasks by date
@@ -107,15 +114,28 @@ const sortedTasks = [...tasks].sort((a, b) => new Date(b.taskDay) - new Date(a.t
 
 
   return (
-    <div>
+ <div>
 
-      <div className='container_completeTask'> 
-        <h1 className='Title_agendaTask'>Task Agenda</h1>
+  <div className='container_completeTask'> 
+   <h1 className='Title_agendaTask'>Task Agenda</h1>
 
-        <p className='counterTasks'>
-          Tasks Completed: {completedCount} / {tasks.length}
-        </p>
-       
+     <p className='counterTasks'>Tasks Completed: {completedCount} / {tasks.length} </p>
+
+     <div className='containerNavTasks'>
+      <ul className='ulNavTasks'>
+        {["All", "Personal", "Work", "Hobbie", "Study", "Other"].map((type)=>(
+           <li
+                key={type}
+                className={`liNavTasks ${filterType === type ? "activeNav" : ""}`}
+                onClick={() => setFilterType(type)}
+              >
+                {type}
+              </li>
+        ))}
+     
+
+      </ul>
+    </div>
           
 
         {Object.keys(tasksByDate).map((date) => (
@@ -169,7 +189,7 @@ const sortedTasks = [...tasks].sort((a, b) => new Date(b.taskDay) - new Date(a.t
         ))}
       </div>
       
-    </div>
+ </div>
   )
 }
 

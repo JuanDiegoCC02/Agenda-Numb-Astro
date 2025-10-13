@@ -1,0 +1,24 @@
+.containerCloseSession {
+  display: flex;
+  justify-content: center;
+
+}
+
+.btnCloseSession {
+  background-color: rgba(40, 0, 60, 0.8);
+  color: #e0dfff;
+  border: 1px solid rgba(150, 100, 255, 0.4);
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover: sutil brillo galáctico */
+.btnCloseSession:hover {
+  background-color: rgba(90, 0, 130, 0.9);
+  border-color: rgba(180, 120, 255, 0.7);
+  color: #ffffff;
+}
