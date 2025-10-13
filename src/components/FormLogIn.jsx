@@ -3,11 +3,13 @@ import { Link,  useNavigate } from 'react-router-dom'
 import { getUsers, postUsers, updateUsers, deleteUser } from '../services/llamadosUsers.js'
 import LogoNA from '../imagenes/LogoNA.png'
 import "../styles/FormLogIn.css"
+import ErrorCredentialsModal from './Modals/ErrorCredentialsModal.jsx'
 
 function FormLogIn() {
     const [Username, setUsername]=useState("");
     const [Password, setPassword]=useState("");
     const [UsersDatas, setUsersDatas]=useState([]);
+    const [errorCredentials, setErrorCredentials]= useState(false)
     const Navigate = useNavigate ()
 
     useEffect(()=>{
@@ -36,7 +38,17 @@ function FormLogIn() {
             localStorage.setItem("TypeUser", found.typeUser)
             Navigate ('/')
 
+        } else if (found && found.typeUser ==="Admin") {
+            localStorage.setItem("Username", found.userName)
+            localStorage.setItem("Firstname", found.firstName)
+            localStorage.setItem("Lastname", found.lastName)
+            localStorage.setItem("Email", found.email)
+            localStorage.setItem("Birthday", found.birthday)
+            localStorage.setItem("ID", found.id)
+            localStorage.setItem("TypeUser", found.typeUser)
+            Navigate ('/')
         } else {
+            setErrorCredentials(true)
             console.log ("Invalid Credentials")
         }
     }
@@ -73,6 +85,12 @@ function FormLogIn() {
             <input className='btnEnter' type="button" value="Enter" onClick={enter} />
         </div>
 
+     </div>
+
+     <div>
+        {errorCredentials &&
+        <ErrorCredentialsModal ErrorCredent={" Username or Password Invalid "}/>
+        }
      </div>
 
         <div className='container_linkRegister'>

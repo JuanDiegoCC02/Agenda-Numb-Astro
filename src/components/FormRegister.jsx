@@ -4,6 +4,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import LogoNA from '../imagenes/LogoNA.png'
 import "../styles/FormRegister.css"
 import { useState } from 'react'
+import TCInfoModal from './Modals/TCInfoModal.jsx'
+import ErrorFieldModal from './Modals/ErrorFieldModal.jsx'
+import ErrorTermsCondiModal from './Modals/ErrorTermsCondiModal.jsx'
 
 function FormRegister() {
 const [Username, setUsername]=useState("");
@@ -13,6 +16,10 @@ const [Email, setEmail]=useState("");
 const [Birthday, setBirthday]=useState(""); 
 const [Password, setPassword]=useState(""); 
 const [TermsCondi, setTermsCondi]=useState(false);
+const [showInfoTC, setShowInfoTC]= useState(false)
+const [errorTerms, setErrorTerms]= useState(false);
+const [errorFields, setErrorFields]= useState(false);
+
 const navigate = useNavigate ();
 
 function userName(e) {
@@ -34,12 +41,20 @@ function password(e) {
   setPassword(e.target.value)
 }
 function termscondiHandle(e) {
-  setTermsCondi(e.target.value)
+  setTermsCondi(e.target.checked)
+  if (!TermsCondi) {
+    setShowInfoTC(true)
+  }
   
+}
+function closeInfoTC() {
+  setShowInfoTC(false);
 }
 function register(e) {
   if (!Username||!Firstname||!Lastname||!Email||!Birthday||!Password) {
-    console.log("Complete all fields")
+    setErrorFields(true)
+  } else if (!TermsCondi){
+    setErrorTerms(true)
   } else {
     postUsers(Username, Firstname, Lastname, Email, Birthday, Password, "User")
     navigate ('/login')
@@ -103,6 +118,29 @@ function register(e) {
             <input className='btnRegister' type="button" value="Register" onClick={register} />
         </div>
       </div>
+
+    <div>
+      <>
+      {showInfoTC && (
+        <>
+        <button className='btnCloseTC' onClick={closeInfoTC} >X</button>
+        <TCInfoModal InfoTC={"You agree to the terms and conditions of our Registration and the policies for the correct use of Our Page."} />
+        </>
+      )}
+      </>
+    </div><br />
+    <div>
+      {
+        errorFields && 
+        <ErrorFieldModal ErrorCompleteFields={"Complete All Fields"} />
+      }
+    </div>
+    <div>
+      {
+        errorTerms &&
+        <ErrorTermsCondiModal ErrorTC={"Accept the terms and conditions"} />
+      }
+    </div><br />
 
       <div className='container_linkLogIn'>
        <p>Are you already registered?</p> <a className='linkLogIn' href="/login">Log In</a>
