@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getUsers, updateUsers } from '../services/llamadosUsers.js'
 import "../styles/CardProfile.css"
-  
 import ErrorUpdateModal from './Modals/ErrorUpdateModal.jsx';
 
 
@@ -46,6 +45,7 @@ async function editBtn(id) {
 
     if (!anyFieldChanged) {
       setErrorUpdate(true)
+      return
     }
 
   const profileEdit ={

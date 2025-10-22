@@ -162,3 +162,18 @@ color: #c3f5fc;
   color: #ff00ff;
   text-shadow: 0 0 8px #00f9ff, 0 0 12px #ff00ff;
 }
+
+.containerInfoTCX{
+  display: flex;
+  justify-content: center;
+}
+
+.btnCloseTC{
+background-color: rgba(142, 223, 223, 0.781);
+color: rgb(19, 17, 134);
+border-radius: px;
+cursor: pointer;
+position: absolute;
+margin-left: 505px;
+margin-top: 6px;
+}

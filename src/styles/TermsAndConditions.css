@@ -1,0 +1,84 @@
+
+/* ==== TÍTULO PRINCIPAL ==== */
+.containerTitleTC {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.titleTermsConditions {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #00f9ff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.containerCardsTC{
+display: flex;
+flex-direction: row;
+
+
+}
+
+/* ==== CONTENEDORES ==== */
+.containerInfoTerms,
+.containerInfoConditions {
+  width: 45%;
+  background: rgba(10, 15, 35, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  vertical-align: top;
+  margin: 25px;
+}
+
+.containerInfoTerms:hover,
+.containerInfoConditions:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.12);
+}
+
+/* ==== TÍTULOS SECUNDARIOS ==== */
+.titleTerms,
+.titleConditions {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #84ffff;
+  margin-bottom: 15px;
+}
+
+/* ==== TEXTO ==== */
+.textTerms,
+.textConditions {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #c8d0ff;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* ==== DISTRIBUCIÓN DE COLUMNAS ==== */
+.containerInfoTerms {
+  margin-left: 4%;
+}
+
+.containerInfoConditions {
+  margin-right: 4%;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 950px) {
+  .containerInfoTerms,
+  .containerInfoConditions {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .titleTermsConditions {
+    font-size: 1.4rem;
+  }
+}

@@ -119,7 +119,7 @@ function register(e) {
         </div>
       </div>
 
-    <div>
+    <div className='containerInfoTCX'>
       <>
       {showInfoTC && (
         <>

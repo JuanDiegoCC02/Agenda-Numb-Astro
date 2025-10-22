@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "userName": "JD",
-      "firstName": "Juan Diego",
-      "lastName": "Corella Camacho",
-      "email": "JD16@gmail.com",
-      "id": "2244"
-    },
-    {
       "id": "2245",
       "userName": "Lil",
       "firstName": "Lil",
@@ -16,6 +9,13 @@
       "birthday": "10/14/2000",
       "password": "1234",
       "typeUser": "User"
+    },
+    {
+      "userName": "JD",
+      "firstName": "Juan Diego",
+      "lastName": "Corella Camacho",
+      "email": "JD16@astro.com",
+      "id": "2472"
     }
   ],
   "tasks": [

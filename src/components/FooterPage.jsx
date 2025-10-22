@@ -17,13 +17,13 @@ function FooterPage() {
         </div>
 
         <div>
-            <a href="">Services/Policies</a>
+            <a href="/termsConditions">Services/Policies</a>
         </div>
 
 
 
         <div>
-            <a href="">2025 Numb Astro / All rights reserved.</a>
+            <a href="/">2025 Numb Astro / All rights reserved.</a>
         </div>
         
         

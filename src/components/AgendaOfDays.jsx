@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
  import { updateTasks, deleteTasks } from '../services/llamadosTasks.js'
-
 import "../styles/AgendaOfDays.css"
+import ErrorUpdateModal from './Modals/ErrorUpdateModal.jsx';
 
 function AgendaOfDays() {
   const [tasks, setTasks] = useState([]);
@@ -14,6 +14,7 @@ function AgendaOfDays() {
   const [editTitleTask, setEditTitleTask]= useState("")
   const [editDescriptionTask, setEditDescriptionTask]= useState("")
   const [filterType, setFilterType]= useState("All")
+  const [errorUpdate, setErrorUpdate]= useState(false)
 
 
 function newDateTask(e) {
@@ -26,6 +27,14 @@ function newDescriptionTask(e) {
   setEditDescriptionTask(e.target.value)
 }
 async function editBtn(id) {
+  const anyFieldChanged = 
+  (editTitleTask && editTitleTask !== task.title)||
+  (editDescriptionTask && editDescriptionTask !== task.description)||
+  (editDateTask && editDateTask !== task.taskDay)
+  if (!anyFieldChanged) {
+    setErrorUpdate(true)
+    return
+  }
   const taskEdit ={
     "title": editTitleTask || task.title,
     "description": editDescriptionTask || task.description,
@@ -171,10 +180,17 @@ function deleteBtn(id) {
                     <input type="text" onChange={newTitleTask} placeholder='Task Title' className='SpaceEditTask' />
                     <input type="text" onChange={newDescriptionTask} placeholder='Task Description' className='SpaceEditTask' />
                    <button className='confirmEdit' onClick={() => editBtn(task.id)}>Uptade</button>
+                    <div>
+                      {
+                        errorUpdate && 
+                        <ErrorUpdateModal ErrorPerformUpdate={"Perform an Update before updating"}/> 
+                      }
+                    </div>
                     </>
                     }
 
                   </div>
+
                   <div className='containerBtnDelete'>
                     <button className='btnDeleteTask' 
                     onClick={e => deleteBtn(task.id)}>Delete</button>

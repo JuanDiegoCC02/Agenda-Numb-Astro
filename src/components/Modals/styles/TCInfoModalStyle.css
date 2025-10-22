@@ -1,22 +1,23 @@
 .containerInfoTC {
-  background: radial-gradient(circle at top, rgba(0, 20, 25, 0.95), rgba(0, 40, 50, 0.9));
-  border: 1px solid rgba(0, 255, 180, 0.5);
+  position: relative;
+  background: radial-gradient(circle at top, rgba(13, 83, 100, 0.95), rgba(2, 36, 63, 0.815));
+  border: 2px solid rgba(0, 204, 255, 0.5);
   border-radius: 14px;
   padding: 18px 30px;
   width: fit-content;
   max-width: 480px;
   margin: 25px auto;
   text-align: center;
-  box-shadow: 0 0 25px rgba(0, 255, 200, 0.25);
+  box-shadow: 0 0 25px rgba(80, 235, 255, 0.774);
   animation: fadeInTCInfo 0.35s ease-in-out, glowTC 2.5s infinite alternate;
 }
 
 .messageInfoTC {
-  color: #8ef9d0;
+  color: #afb0ffe3;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  text-shadow: 0 0 8px rgba(100, 255, 210, 0.7);
+  text-shadow: 0 0 8px rgb(0, 32, 212);
   margin: 0;
   text-transform: uppercase;
 }

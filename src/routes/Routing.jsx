@@ -9,6 +9,7 @@ import New from '../pages/New';
 import Profile from '../pages/Profile';
 import StarsMapPag from '../pages/StarsMapPag';
 import LootPag from '../pages/LootPag';
+import TermsAndConditionsPag from '../pages/TermsAndConditionsPag';
 
 function Routing() {
   return (
@@ -22,8 +23,9 @@ function Routing() {
              <Route path = '/new' element = {<New/>}/> 
              <Route path = '/profile' element = {<Profile/>}/> 
              <Route path = '/starsMap' element = {<StarsMapPag/>}/> 
-
              <Route path = '/loot' element = {<LootPag/>}/> 
+             
+             <Route path = '/termsConditions' element = {<TermsAndConditionsPag/>}/> 
 
      </Routes>
    </Router>
