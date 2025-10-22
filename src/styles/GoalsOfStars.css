@@ -36,6 +36,7 @@
   transition: transform 0.3s;
 }
 
+
 .star:hover {
   transform: scale(1.5);
   background-color: rgb(42, 42, 133);

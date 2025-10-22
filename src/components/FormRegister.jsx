@@ -67,7 +67,7 @@ function register(e) {
 
           <div className='container_Logo'>
             <Link to ="/">
-              <img src={LogoNA} alt="logo" style={{ width: '250px' }} />
+              <img src={LogoNA} alt="logo" className='LogoNA' />
             </Link>
           </div>
 
@@ -128,7 +128,7 @@ function register(e) {
         </>
       )}
       </>
-    </div><br />
+    </div>
     <div>
       {
         errorFields && 
@@ -140,7 +140,7 @@ function register(e) {
         errorTerms &&
         <ErrorTermsCondiModal ErrorTC={"Accept the terms and conditions"} />
       }
-    </div><br />
+    </div>
 
       <div className='container_linkLogIn'>
        <p>Are you already registered?</p> <a className='linkLogIn' href="/login">Log In</a>

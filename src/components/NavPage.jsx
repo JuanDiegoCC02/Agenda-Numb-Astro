@@ -50,7 +50,7 @@ function NavPage() {
      <>
      <div className='containerBtnAjustes'>
        <ul className='ulBtnAjustes'>
-        <li className='liBtnAjustes'><Link to="/profile">Profile</Link></li>
+        <li className='liBtnAjustes'><Link className='btnProfile' to="/profile">Profile</Link></li>
 
          <li className='liBtnAjustes'><BtnCloseProfile/></li>
        </ul>

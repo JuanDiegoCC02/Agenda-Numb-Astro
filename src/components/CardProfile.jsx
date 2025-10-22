@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getUsers, updateUsers } from '../services/llamadosUsers.js'
 import "../styles/CardProfile.css"
+  
+import ErrorUpdateModal from './Modals/ErrorUpdateModal.jsx';
 
 
 function CardProfile() {
@@ -20,6 +22,7 @@ function CardProfile() {
   const [editLastname, setEditLastname]= useState("")
   const [editEmail, setEditEmail]= useState("")
   const [reload, setReload] = useState(false)
+  const [errorUpdate, setErrorUpdate]= useState(false)
   
   function newUsername(e) {
     setEditUsername(e.target.value)
@@ -35,6 +38,16 @@ function CardProfile() {
   }
 
 async function editBtn(id) {
+  const anyFieldChanged = 
+    (editUsername && editUsername !== user.userName) ||
+    (editFirstname && editFirstname !== user.firstName) ||
+    (editLastname && editLastname !== user.lastName) ||
+    (editEmail && editEmail !== user.email);
+
+    if (!anyFieldChanged) {
+      setErrorUpdate(true)
+    }
+
   const profileEdit ={
     "userName": editUsername || user.userName,
     "firstName": editFirstname || user.firstName,
@@ -42,11 +55,14 @@ async function editBtn(id) {
     "email": editEmail || user.email
   }
 
+
   try {
      const updatedUser = await updateUsers(id, profileEdit)
     setUser(updatedUser)
     setGetEditSpaces(false)
   } catch (error) {
+
+    setErrorUpdate(true)
     console.log("Error updating user")
   }
 }
@@ -119,14 +135,22 @@ async function editBtn(id) {
         <input type="text" onChange={newLastname} placeholder='Lastname' className='spaceEditProfile'/>
         <input type="text" onChange={newEmail} placeholder='Email' className='spaceEditProfile'/>
         <button className='confirmEdit' onClick={() => editBtn(user.id)}>Update</button>
+
+        <div>
+          {
+            errorUpdate &&
+              <ErrorUpdateModal ErrorPerformUpdate={"Perform an Update before updating"}/> 
+          }
+        </div>
         </>
         }
       </div>
 
       <div className='containerCounterTaskProfile'>
       <p className='counterTasksProfile'>
-       Stars: {tasks.length} 
+       Stars:  <a className='numStars' href="/starsMap">{tasks.length}   </a>
       </p>
+
       </div>
 
     </div>

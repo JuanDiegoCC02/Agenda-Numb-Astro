@@ -1,16 +1,18 @@
 
 /* Logo Container*/
+
 .container_Logo {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.container_Logo img {
-  width: 200px;
+.LogoNA {
+ width: 220px;
+
   border-radius: 60px;
   transition: transform 0.4s ease;
 }
-.container_Logo img:hover {
-  transform: scale(1.05);
+.LogoNA:hover {
+  transform: scale(1.02);
   filter: drop-shadow(0 0 10px #569aacb0);
 }
 
@@ -19,11 +21,11 @@
 .container_title{
   width: 500px;
   text-align: center;
-  margin: 60px auto;
-  margin-bottom: 20px;
+  margin: 40px auto;
+  
 }
 .title_NamePage {
-  font-size: 4rem;
+  font-size: 3.3rem;
   text-shadow: 0 0 10px #7a00ff, 0 0 20px #0f939c;
   letter-spacing: 3px;
   
@@ -35,9 +37,10 @@ color: #c3f5fc;
 
 /* Form Container */
 .container_Form {
-  width: 420px;
-  margin: 60px auto;
-  padding: 40px 35px;
+  width: 400px;
+ 
+  margin: 40px auto;
+  padding: 25px 20px;
   background: rgba(5, 10, 20, 0.8);
   border: 3px solid rgb(0, 217, 255);
   border-radius: 20px;
@@ -45,19 +48,16 @@ color: #c3f5fc;
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.container_Form:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), inset 0 0 20px rgba(255, 0, 255, 0.2);
-}
+
 
 
 /* Container Register Title */
 .container_titleRegister {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .title_Register {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #eeeeee;
   display: inline-block;
   padding-bottom: 4px;
@@ -71,6 +71,7 @@ color: #c3f5fc;
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .label_FormRegister {
   margin-bottom: 6px;
@@ -81,7 +82,7 @@ color: #c3f5fc;
   
 }
 .input_FormRegister {
-  padding: 12px 15px;
+  padding: 9px ;
   border: 1px solid transparent;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.4);
@@ -89,6 +90,9 @@ color: #c3f5fc;
   box-shadow: inset 0 0 10px #00fbffbe;
   transition: all 0.3s ease;
   font-family: 'Orbitron', sans-serif;
+  
+
+  
 }
 .input_FormRegister:focus {
   outline: none;
@@ -101,11 +105,13 @@ color: #c3f5fc;
 /* Terms and Conditions */
 .container_LabelCheckboxRegister {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   margin: 20px 0 10px;
 }
 .label_CheckboxRegister {
+  align-items: center;
   color: #00f9ff;
   font-size: 0.9rem;
 }
@@ -123,21 +129,20 @@ color: #c3f5fc;
   margin-top: 25px;
 }
 .btnRegister {
-  padding: 12px 40px;
-  font-size: 1rem;
+  padding: 7px 25px;
+  font-size: 0.90rem;
   font-weight: bold;
-  border: 2px solid rgb(14, 158, 127);
+  border:3px solid rgba(94, 255, 255, 0.644);
   border-radius: 30px;
-  background: linear-gradient(135deg, #05737a, #010b1d);
+  background: linear-gradient(135deg, #383d8f, #4e5077);
   color: #ffffff;
   cursor: pointer;
-  
   transition: all 0.3s ease;
   font-family: 'Orbitron', sans-serif;
 }
 .btnRegister:hover {
- 
-  box-shadow: 0 0 15px #05e0e0, inset 0 0 8px #440202;
+  background: linear-gradient(135deg, #414363, #414363);
+  box-shadow: 0 0 15px #397dca70, inset 0 0 8px #053358;
   transform: scale(1.05);
 }
 

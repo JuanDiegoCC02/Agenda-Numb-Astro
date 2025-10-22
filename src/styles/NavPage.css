@@ -103,8 +103,8 @@
   top: 20px;
   right: 30px;
   z-index: 2000;
-  background: radial-gradient(circle at center, #00d9ff 0%, #001829 70%);
-  border: 1px solid #00eaff;
+  background: radial-gradient(circle at center, #87e6f7 0%, #001829 70%);
+  border: 2px solid #10929e;
   border-radius: 50%;
   padding: 10px;
   cursor: pointer;
@@ -118,8 +118,9 @@
 
 .btnAjustes:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 18px rgb(93, 189, 206);
   background: radial-gradient(circle at center, #00ffff 0%, #00243d 80%);
+  border-color: #00243d;
 }
 
 /* === CONTENEDOR DE OPCIONES === */
@@ -158,24 +159,34 @@
 
 .liBtnAjustes {
   padding: 10px 15px;
-  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(150, 100, 255, 0.4);
   transition: background 0.25s ease, color 0.25s ease;
   display: grid;
   justify-content: center;
+  background-color: rgba(40, 0, 60, 0.8);
+  color: #ffffff;
+ 
 }
 
 .liBtnAjustes:last-child {
   border-bottom: none;
 }
 
-.liBtnAjustes a {
+.btnProfile {
   text-decoration: none;
-  color: #e4f9ff;
-  font-size: 0.95rem;
+  padding: 8px 20px;
+  font-size: 0.86rem;
   display: block;
+  background-color: rgba(40, 0, 60, 0.8);
+  color: #ffffff;
+  border: 2px solid rgba(253, 255, 107, 0.733);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+    letter-spacing:  2px;
 }
 
-.liBtnAjustes:hover {
-  background: rgba(0, 255, 255, 0.12);
-  color: #00ffff;
+.btnProfile:hover {
+  background:rgb(164, 167, 32);
+  border: 2px solid rgb(2, 4, 85);
 }

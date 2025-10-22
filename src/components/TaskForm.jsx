@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { postTasks } from '../services/llamadosTasks.js'
 import  "../styles/FormTask.css"
+import ErrorFieldModal from './Modals/ErrorFieldModal.jsx'
 
 function TaskForm() {
   const [Title, setTitle]=useState("")
@@ -8,6 +9,8 @@ function TaskForm() {
   const [Description, setDescription]=useState("")
   const [TaskDay, setTaskDay]=useState("")
   const [reload, setReload]= useState(false)
+
+  const [errorFields, setErrorFields]= useState(false)
 
   function title(e) {
     setTitle(e.target.value)
@@ -24,6 +27,7 @@ function TaskForm() {
 
   function createTask(e) {
     if (!Title || !TaskType || !Description || !TaskDay) {
+      setErrorFields(true)
       console.log ("Complete all fields to create the task")
     } else {
       postTasks(Title, TaskType, Description, TaskDay, localStorage.getItem("Username"))
@@ -77,6 +81,14 @@ function TaskForm() {
           </div>
 
         </div>
+
+      <div>
+        {
+          errorFields && 
+          <ErrorFieldModal ErrorCompleteFields={"Complete All Fields"}/>
+        }
+      </div><br />
+
     </div>
   )
 }

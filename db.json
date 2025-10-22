@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "userName": "JDiego",
+      "userName": "JD",
       "firstName": "Juan Diego",
       "lastName": "Corella Camacho",
-      "email": "JDCamacho@gmai.com",
-      "id": "2763"
+      "email": "JD16@gmail.com",
+      "id": "2244"
     },
     {
       "id": "2245",
@@ -15,16 +15,6 @@
       "email": "KillLil@gmail.com",
       "birthday": "10/14/2000",
       "password": "1234",
-      "typeUser": "User"
-    },
-    {
-      "id": "b76d",
-      "userName": "JD",
-      "firstName": "Juan Diego",
-      "lastName": "Corella Camacho",
-      "email": "JD16@gmail.com",
-      "birthday": "16/10/2004",
-      "password": "444",
       "typeUser": "User"
     }
   ],

@@ -57,7 +57,7 @@ function FormLogIn() {
     <div>
         <div className='container_Logo'>
             <Link to ="/">
-             <img src={LogoNA} alt="Logo" style={{ width: '250px' }} />
+             <img src={LogoNA} alt="Logo" className='LogoNA' />
             </Link>
         </div>
 
@@ -82,7 +82,7 @@ function FormLogIn() {
         </div>
         
         <div className='container_btnEnter'>
-            <input className='btnEnter' type="button" value="Enter" onClick={enter} />
+            <input className='btnEnter' type="button" value="Log In" onClick={enter} />
         </div>
 
      </div>
