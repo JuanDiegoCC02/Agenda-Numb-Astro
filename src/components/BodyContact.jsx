@@ -12,6 +12,12 @@ function BodyContact() {
        <p className='infoPage'> With an immersive design and a focus on well-being, Numb Astro turns your to-do list into a star map that guides you toward a more balanced and productive lifestyle.</p>
       </div>
 
+  <div className='containerThanks'>
+      <p className='textThanks'> Thank you for being part of the Numb Astro universe 💫</p>
+
+      <p className='textThanks'> Without you, Numb Astro would be nothing more than a dream in space.
+    Thank you for joining us and helping us shine. Your perseverance is what lights up the stars. 🌠</p>
+    </div>
 
 <div className='container_AllInfoContact'>
     <div className='containerTitleC'>
@@ -27,14 +33,9 @@ function BodyContact() {
       <h4 className='titleEmail'>By Email</h4>
       <p className='email'>NumbAstro@gmail.com</p>
     </div>
-  </div>
+  </div><br /><br />
 </div>
-    <div className='containerThanks'>
-      <p className='textThanks'> Thank you for being part of the Numb Astro universe 💫</p>
-
-      <p className='textThanks'> Without you, Numb Astro would be nothing more than a dream in space.
-    Thank you for joining us and helping us shine. Your perseverance is what lights up the stars. 🌠</p>
-    </div>
+  
 
     </div>
   )

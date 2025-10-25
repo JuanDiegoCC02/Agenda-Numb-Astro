@@ -1,50 +1,110 @@
-.star-card {
+/* Fondo semitransparente que cubre toda la pantalla */
+.star-card-overlay {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(15, 22, 50, 0.95);
-  border: 1px solid #4cc3ff;
-  box-shadow: 0 0 20px #4cc3ff, inset 0 0 20px rgba(0, 100, 255, 0.3);
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(10, 12, 25, 0.9), rgba(3, 5, 15, 0.95));
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFade 0.6s ease forwards;
+  z-index: 99;
+}
+
+/* Animación del fondo */
+@keyframes overlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Tarjeta galáctica */
+.star-card {
+  position: relative;
+  background: radial-gradient(circle at 30% 30%, rgba(20, 30, 70, 0.95), rgba(5, 10, 30, 0.85));
+  border: 1px solid rgba(100, 180, 255, 0.5);
+  box-shadow: 
+    0 0 15px rgba(80, 150, 255, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.15) inset;
   border-radius: 20px;
-  color: white;
-  width: 320px;
-  padding: 20px;
-  z-index: 100;
+  color: #e8f3ff;
+  width: 340px;
+  padding: 24px;
+  text-align: center;
+  overflow: hidden;
+  animation: floatIn 0.6s ease forwards;
   backdrop-filter: blur(6px);
-  animation: fadeIn 0.5s ease forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -45%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
+/* Animación de aparición con flotación */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
+/* Efecto de brillo orbital */
+.star-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 200, 255, 0.2) 90deg,
+    transparent 180deg,
+    rgba(180, 120, 255, 0.15) 270deg,
+    transparent 360deg
+  );
+  animation: rotateGlow 10s linear infinite;
+  pointer-events: none;
+}
+
+/* Rotación lenta del brillo */
+@keyframes rotateGlow {
+  to { transform: rotate(360deg); }
+}
+
+/* Título */
 .star-card h3 {
-  color: #9cd4ff;
-  text-shadow: 0 0 10px #4cc3ff;
-  margin-bottom: 10px;
+  color: #a0d8ff;
+  text-shadow: 0 0 15px #00aaff, 0 0 25px #6cf;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 12px;
 }
 
+/* Descripción y detalles */
 .star-card p {
-  font-size: 0.9rem;
-  color: #cceaff;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #cfe8ff;
+  line-height: 1.5;
+  margin: 6px 0;
 }
 
+/* Botón */
 .star-card button {
-  background: linear-gradient(90deg, #0099ff, #66d0ff);
+  background: linear-gradient(90deg, #00aaff, #8be4ff);
   border: none;
-  border-radius: 10px;
-  padding: 8px 16px;
-  color: white;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #33ccff;
 }
 
 .star-card button:hover {
-  background: linear-gradient(90deg, #66d0ff, #0099ff);
-  box-shadow: 0 0 15px #66d0ff;
+  background: linear-gradient(90deg, #8be4ff, #00aaff);
+  box-shadow: 0 0 20px #66e0ff, 0 0 40px #00ffff;
+  transform: scale(1.05);
 }

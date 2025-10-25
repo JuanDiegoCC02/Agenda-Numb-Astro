@@ -1,56 +1,71 @@
-/* Carrusel */
+/* Carrusel general */
 .carousel {
   position: relative;
-  max-width: 360px;
-  margin: 50px auto;
+  max-width: 900px; /* 🔹 antes 360px, ahora el doble */
+  margin: 60px auto;
   text-align: center;
-  background: rgba(15, 15, 30, 0.85);
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
-  backdrop-filter: blur(8px);
+  background: radial-gradient(circle at top, rgba(10, 15, 30, 0.9), rgba(5, 10, 25, 0.95));
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow:
+    0 0 30px rgba(0, 200, 255, 0.25),
+    0 0 60px rgba(150, 80, 255, 0.15);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  animation: fadeIn 1s ease;
 }
 
 /* Tarjetas */
 .card {
   background: rgba(255, 255, 255, 0.04);
-  padding: 22px;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 200, 255, 0.15);
-  box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 0.6s ease-in-out;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  box-shadow:
+    0 0 25px rgba(0, 200, 255, 0.3),
+    inset 0 0 15px rgba(0, 200, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: cardPop 0.6s ease-in-out;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(0, 200, 255, 0.2);
+  transform: translateY(-3px) scale(1.00);
+  box-shadow:
+    0 0 30px rgba(169, 85, 247, 0.288),
+    0 0 50px rgba(0, 89, 255, 0.25);
 }
 
-/* Imagen con brillo controlado */
+/* Imagen */
 .card img {
-  width: 210px;
+  width: 420px; /* 🔹 antes 210px */
   height: auto;
-  border-radius: 10px;
-  filter: drop-shadow(0px 0px 12px #051d69);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 14px;
+  filter: drop-shadow(0px 0px 20px #041a60);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
+.card img:hover {
 
+  filter: drop-shadow(0 0 25px #0026ff8f);
+}
 
-/* Títulos más sobrios */
+/* Título */
 .card h3 {
-  margin: 14px 0 8px;
-  font-size: 1.3rem;
+  margin: 18px 0 10px;
+  font-size: 1.8rem;
   color: #e6faff;
-  text-shadow: 0 0 6px rgba(0, 200, 255, 0.6);
-  font-weight: 600;
+  text-shadow: 0 0 12px rgba(0, 200, 255, 0.8);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
 }
 
+/* Descripción */
 .card p {
-  font-size: 0.95rem;
-  color: #b5c6d6;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  color: #bcd8ff;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* Botones flecha */
@@ -58,30 +73,34 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 200, 255, 0.1);
-  border: 1px solid rgba(0, 200, 255, 0.25);
+  background: radial-gradient(circle at center, rgba(0, 200, 255, 0.2), rgba(0, 100, 255, 0.1));
+  border: 1px solid rgba(0, 200, 255, 0.4);
   color: #e6faff;
-  font-size: 1.8rem;
-  padding: 6px 12px;
+  font-size: 2.2rem; /* 🔹 más grandes */
+  padding: 10px 16px;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
   transition: all 0.3s ease;
 }
 
 .prev:hover, .next:hover {
-  background: rgba(0, 200, 255, 0.2);
-  box-shadow: 0 0 18px rgba(0, 200, 255, 0.4);
-  transform: translateY(-50%) scale(1.1);
+  background: radial-gradient(circle at center, rgba(0, 200, 255, 0.3), rgba(0, 100, 255, 0.2));
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.5);
+  transform: translateY(-50%) scale(1.15);
 }
 
 /* Posición de flechas */
-.prev { left: -45px; }
-.next { right: -45px; }
+.prev { left: 55px; }  /* 🔹 más separadas */
+.next { right: 55px; }
 
-/* Animación entrada */
+/* Animaciones */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
-  
+
+@keyframes cardPop {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

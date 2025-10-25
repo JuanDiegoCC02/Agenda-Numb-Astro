@@ -10,19 +10,24 @@
   backdrop-filter: blur(5px);
 }
 
-/* title pr */
-.Title_agendaTask {
+.containerTitleAgendaT{
   text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 30px;
-  color: #cfdfff;
-  text-shadow: 0 0 5px #0ff, 0 0 12px #7700ff;
+  margin-bottom: 40px;
+  color: #f0f0ff;
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 2px;
+  text-shadow: 0 0 8px #00f9ff, 0 0 16px #ff00ff;
+  position: relative;
+  margin-top: 45px;
+}
+
+.Title_agendaTask {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  animation: glowTitle 2s ease-in-out infinite alternate;
  
 }
 
-/* ContainerTask */
+
 .container_task {
   margin-bottom: 25px;
   padding: 16px;

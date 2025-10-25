@@ -8,7 +8,7 @@ function AgendaOfDays() {
   const [loading, setLoading] = useState(true);
   const [reload, setReload] = useState(false)
 
-  const [spacesForEDit, setSpacesForEdit] = useState(false)
+  const [editForTaskID, setEditForTaskID] = useState(null)
   const [task, setTask]= useState(null)
   const [editDateTask, setEditDateTask]= useState("")
   const [editTitleTask, setEditTitleTask]= useState("")
@@ -26,6 +26,8 @@ function newTitleTask(e) {
 function newDescriptionTask(e) {
   setEditDescriptionTask(e.target.value)
 }
+
+/*Function edit with validations and select TaskID */
 async function editBtn(id) {
   const anyFieldChanged = 
   (editTitleTask && editTitleTask !== task.title)||
@@ -43,11 +45,19 @@ async function editBtn(id) {
   try {
     const updatedTask = await updateTasks(taskEdit, id)
     setTask(updatedTask)
-    setSpacesForEdit(false)
+
+    setTasks(prev => 
+      prev.map(task =>(task.id === id ? { ...task, ...updatedTask}: task))
+    )
+    setEditForTaskID(null)
+    setReload(true)
+   
   } catch (error) {
     console.log("Error updating task")
   }
 }
+
+
 function deleteBtn(id) {
   deleteTasks(id)
   setReload(!reload)
@@ -99,6 +109,7 @@ function deleteBtn(id) {
   if (loading){ return <p>loading task...</p>;
   }else if (tasks.length === 0){ return <p>There are no registered tasks.</p>;}
 
+  /* Select typeTask by filter */
   const filteredTasks =
   filterType === "All"
     ? tasks
@@ -124,9 +135,12 @@ function deleteBtn(id) {
 
   return (
  <div>
-
-  <div className='container_completeTask'> 
+  <div className='containerTitleAgendaT'>
    <h1 className='Title_agendaTask'>Task Agenda</h1>
+  </div>
+  
+  <div className='container_completeTask'> 
+   
 
      <p className='counterTasks'>Tasks Completed: {completedCount} / {tasks.length} </p>
 
@@ -173,8 +187,8 @@ function deleteBtn(id) {
 
                   <div className='containerBtnEdit'>
                     <button className='btnEditTask' 
-                    onClick={() => setSpacesForEdit(!spacesForEDit)}>Edit</button>
-                    {spacesForEDit &&
+                    onClick={() =>{setTask(task);  setEditForTaskID(editForTaskID === task.id? null : task.id )}}>Edit</button>
+                    {editForTaskID === task.id && 
                     <><br />
                     <input type="text" onChange={newDateTask} placeholder='Task Day' className='SpaceEditTask' />
                     <input type="text" onChange={newTitleTask} placeholder='Task Title' className='SpaceEditTask' />
