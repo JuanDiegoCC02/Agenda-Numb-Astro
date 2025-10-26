@@ -11,11 +11,14 @@
       "typeUser": "User"
     },
     {
+      "id": "2244",
       "userName": "JD",
       "firstName": "Juan Diego",
       "lastName": "Corella Camacho",
       "email": "JD16@astro.com",
-      "id": "2472"
+      "birthday": "10/16/2004",
+      "password": "444",
+      "typeUser": "User"
     }
   ],
   "tasks": [
