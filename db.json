@@ -18,7 +18,7 @@
       "email": "JD16@astro.com",
       "birthday": "10/16/2004",
       "password": "444",
-      "typeUser": "User"
+      "typeUser": "admin"
     }
   ],
   "tasks": [

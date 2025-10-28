@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
-import { getUsers, postUsers, updateUsers, deleteUser } from '../services/llamadosUsers.js'
+import { getUsers, postUsers, updateUsers, deleteUsers } from '../services/llamadosUsers.js'
 import LogoNA from '../imagenes/LogoNA.png'
 import "../styles/FormLogIn.css"
 import ErrorCredentialsModal from './Modals/ErrorCredentialsModal.jsx'
@@ -38,7 +38,7 @@ function FormLogIn() {
             localStorage.setItem("TypeUser", found.typeUser)
             Navigate ('/')
 
-        } else if (found && found.typeUser ==="Admin") {
+        } else if (found && found.typeUser ==="admin") {
             localStorage.setItem("Username", found.userName)
             localStorage.setItem("Firstname", found.firstName)
             localStorage.setItem("Lastname", found.lastName)

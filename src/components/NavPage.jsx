@@ -37,6 +37,14 @@ function NavPage() {
         <li><Link to="/loot">Loot</Link> </li>
         </>
         )}
+
+       {
+        localStorage.getItem("TypeUser") === "admin" && (
+         <>
+         <li><Link to= "/admin">Administration</Link></li>
+         </>
+        )
+       }
       </ul>
       </div>
       

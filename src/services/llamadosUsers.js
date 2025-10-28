@@ -92,7 +92,7 @@ async function updateUsers(id, userData) {
 //////////////LLAMADO DELETE/////////////
 
 
-async function deleteUser(id) {
+async function deleteUsers(id) {
     try {
         const response = await fetch(`http://localhost:3000/users/${id}`, {
             method: 'DELETE',
@@ -116,4 +116,4 @@ async function deleteUser(id) {
 
 
 
-export { getUsers, postUsers, updateUsers, deleteUser };
+export { getUsers, postUsers, updateUsers, deleteUsers };

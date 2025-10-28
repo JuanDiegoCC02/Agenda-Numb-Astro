@@ -1,5 +1,5 @@
 import React from 'react'
-import { getUsers, postUsers, updateUsers, deleteUser } from '../services/llamadosUsers.js'
+import { getUsers, postUsers, updateUsers, deleteUsers } from '../services/llamadosUsers.js'
 import { Link, useNavigate } from 'react-router-dom'
 import LogoNA from '../imagenes/LogoNA.png'
 import "../styles/FormRegister.css"
