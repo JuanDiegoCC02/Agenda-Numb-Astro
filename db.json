@@ -23,138 +23,64 @@
   ],
   "tasks": [
     {
-      "id": "29c6",
-      "title": "Dibujar",
-      "taskType": "hobbie",
-      "description": "Dibujar en libreta pequeña el boceto de estrellas.",
-      "taskDay": "2025-10-07",
-      "userName": "Lil",
-      "completed": true
-    },
-    {
-      "id": "594a",
-      "title": "Leer",
-      "taskType": "hobbie",
-      "description": "Leer 10 a 15 páginas en un dia",
-      "taskDay": "2025-10-08",
-      "userName": "Lil",
-      "completed": true
-    },
-    {
-      "id": "93bc",
-      "title": "Practice Piano",
-      "taskType": "Work",
-      "description": "Practice songs on the piano.",
-      "taskDay": "9/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "77d6",
-      "title": "Reading",
-      "taskType": "Hobbie",
-      "description": "Read 5 pages per day.",
-      "taskDay": "8/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "ca02",
-      "title": "Cleaning shoes",
-      "taskType": "Personal",
-      "description": "Cleaning all shoes.",
-      "taskDay": "8/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "71f8",
-      "title": "Cleaning House",
-      "taskType": "Other",
-      "description": "Cleaning an entire room in the house.",
-      "taskDay": "7/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "02a3",
-      "title": "Code reSearch",
+      "id": "c657",
+      "title": "English Class",
       "taskType": "Study",
-      "description": "Investigation new code context. ",
-      "taskDay": "6/10/2025",
-      "userName": "JD",
-      "completed": true
+      "description": "Virtual Class English",
+      "taskDay": "2025-10-10",
+      "userName": "Lil"
     },
     {
-      "id": "6106",
-      "title": "Origami",
+      "id": "e49d",
+      "title": "Play Soccer",
       "taskType": "Hobbie",
-      "description": "Create origami structure.",
-      "taskDay": "7/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "d24c",
-      "title": "Cleaning room ",
-      "taskType": "Personal",
-      "description": "Cleaning all room.",
-      "taskDay": "11/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "3e29",
-      "title": "Soccer game",
-      "taskType": "Hobbie",
-      "description": "Play soccer with friends.",
-      "taskDay": "12/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "5fcb",
-      "title": "Develop code",
-      "taskType": "Work",
-      "description": "Develop the code structure",
-      "taskDay": "10/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "5970",
-      "title": "Volleyball game",
-      "taskType": "Hobbie",
-      "description": "Play volleyball with my family.",
-      "taskDay": "11/10/2025",
-      "userName": "JD",
-      "completed": true
-    },
-    {
-      "id": "df95",
-      "title": "Casa",
-      "taskType": "Personal",
-      "description": "Reparaciones",
+      "description": "Play soccer with friends",
       "taskDay": "2025-10-12",
-      "userName": "Lil",
-      "completed": true
+      "userName": "Lil"
     },
     {
-      "id": "ea40",
-      "title": "Programacion",
+      "id": "d660",
+      "title": "Updating Portfolio",
       "taskType": "Work",
-      "description": "Pruebas del codigo de estructura CMP",
-      "taskDay": "2025-11-15",
-      "userName": "Lil",
+      "description": "Updating porftolio code.",
+      "taskDay": "2025-10-16",
+      "userName": "JD",
       "completed": true
     },
     {
-      "id": "343c",
-      "title": "Cuarto",
+      "id": "684b",
+      "title": "Create Oriigami",
+      "taskType": "Hobbie",
+      "description": "Create Origami Structure.",
+      "taskDay": "2025-10-16",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "c26b",
+      "title": "Play Soccer",
+      "taskType": "Other",
+      "description": "Play soccer with friends",
+      "taskDay": "2025-10-16",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "c339",
+      "title": " Emily Birthday",
       "taskType": "Personal",
-      "description": "Orden del cuarto y Limpieza",
-      "taskDay": "2025-10-13",
-      "userName": "Lil",
+      "description": "Niece Emily´s Birthday ",
+      "taskDay": "2025-10-19",
+      "userName": "JD",
+      "completed": true
+    },
+    {
+      "id": "249d",
+      "title": "October Birthdays Celebration",
+      "taskType": "Personal",
+      "description": "Emily and I celebrated our birthdays with family and dinner.",
+      "taskDay": "2025-10-19",
+      "userName": "JD",
       "completed": true
     }
   ],

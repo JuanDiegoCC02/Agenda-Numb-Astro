@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getUsers, postUsers, updateUsers, deleteUsers } from '../services/llamadosUsers.js'
+import "../styles/GetAdminUsers.css"
 
 function GetAdminUsers() {
     const [users, setUsers]= useState([]);
@@ -24,22 +25,22 @@ function GetAdminUsers() {
     
   return (
     <div>
-        <div>
-            <h3>Users</h3>
+        <div className='containerTitleUsers'>
+            <h3 className='titleUsers'>Users</h3>
         </div>
 
-        <div>
-            <ul>
+        <div className='containerInfoUser'>
+            <ul className='ulUser'>
                 {users.map(user => (
-                <li key={user.id}>
-                    <h5>{user.userName}</h5>
-                    <span>  {user.firstName} </span><br />
-                    <span> {user.lastName} </span><br />
-                    <span> {user.email} </span><br />
-                    <span> {user.birthday} </span><br />
-                    <span> {user.typeUser} </span><br />
-                     <div>
-                      <button onClick={()=> userDelete (user.id)}>delete</button>
+                <li className='liUser' key={user.id}>
+                    <h5 className='titleUsername'>{user.userName}</h5>
+                    <span className='InfoUser'>  {user.firstName} </span><br />
+                    <span className='InfoUser'>  {user.lastName} </span><br />
+                    <span className='InfoUser'> {user.email} </span><br />
+                    <span className='InfoUser'> {user.birthday} </span><br />
+                    <span className='InfoUser'> {user.typeUser} </span><br />
+                     <div className='InfoUser'>
+                      <button className='btnDeleteUser' onClick={()=> userDelete (user.id)}>delete</button>
                      </div>
                 </li>
 
