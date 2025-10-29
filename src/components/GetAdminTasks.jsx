@@ -49,9 +49,9 @@ const options = { chart: {
   },
 
   //Titulo del Grafico
-  title: { text: title || 'Register of the Tasks', align: 'center',
+  title: { text: title || 'Tasks Log', align: 'center',
     style: {
-      fontSize: '16px',
+      fontSize: '20px',
       color: '#e1dcffff',
       
     }
@@ -69,7 +69,7 @@ const options = { chart: {
     labels: { style: { colors: '#fffd8bff' } }
   },
   yaxis: {
-    title: { text: 'Number Of Tasks', style: { color: '#b4b3ffff' } },
+    title: { text: 'Number Of Tasks', style: { color: '#b4b3ffff', fontSize: "16px" } },
     labels: { style: { colors: '#7eecffff' } }
   },
   tooltip: {
