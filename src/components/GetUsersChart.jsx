@@ -1,9 +1,10 @@
 // ApexChart.jsx
 import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import { getTasks } from '../services/llamadosTasks';
+import { getUsers } from '../services/llamadosUsers';
 
-const GetAdminTasks = ({ title }) => {
+
+const GetUsersChart = ({ title }) => {
   const [chartData, setChartData] = useState({
     series: [],
     categories: [],
@@ -11,14 +12,14 @@ const GetAdminTasks = ({ title }) => {
 
   useEffect(() => {
     async function list() {
-      const datos = await getTasks();
+      const datos = await getUsers();
         console.log(datos)
       // const de usuarios por fecha 
       const conteoPorFecha = {};
 
-      datos.forEach((task) => {
+      datos.forEach((user) => {
         
-        const fecha = new Date(task.taskDay).toISOString().split('T')[0];
+        const fecha = new Date(user.creationDate).toISOString().split('T')[0];
         conteoPorFecha[fecha] = (conteoPorFecha[fecha] || 0) + 1;
       });
 
@@ -41,7 +42,7 @@ const options = { chart: {
     zoom: { enabled: false },
     toolbar: { show: false }
   },
-  colors: ['#42ebf7ff'], 
+  colors: ['#eeff00f3'], 
   dataLabels: { enabled: false },
   stroke: {
     curve: 'smooth',
@@ -49,28 +50,28 @@ const options = { chart: {
   },
 
   //Titulo del Grafico
-  title: { text: title || 'Tasks Log', align: 'center',
+  title: { text: title || 'Users Log', align: 'center',
     style: {
       fontSize: '20px',
-      color: '#e1dcffff',
+      color: '#ffe56fff',
       
     }
   },
-  grid: { borderColor: '#25d1c9ff',
+  grid: { borderColor: '#e1ff35ff',
     row: {
-      colors: ['#000000ff', 'transparent'],
+      colors: ['#b1a0078c', 'transparent'],
       opacity: 0.4,
     },
   },
 
   //Indica las categorias del grafico
   xaxis: { categories: chartData.categories,
-    title: { text: 'Day the Task was created', style: { color: '#aee5ffe5' } },
-    labels: { style: { colors: '#b3b3b3ff' } }
+    title: { text: 'Day the User was created', style: { color: '#f1e75aff' } },
+    labels: { style: { colors: '#fffd8bff' } }
   },
   yaxis: {
-    title: { text: 'Number Of Tasks', style: { color: '#b4b3ffff', fontSize: "16px" } },
-    labels: { style: { colors: '#7eecffff' } }
+    title: { text: 'Number Of Users', style: { color: '#e6e343ff', fontSize: "16px" } },
+    labels: { style: { colors: '#ffffffff' } }
   },
   tooltip: {
     theme: 'light',
@@ -86,4 +87,4 @@ const options = { chart: {
   );
 };
 
-export default GetAdminTasks;
+export default GetUsersChart;

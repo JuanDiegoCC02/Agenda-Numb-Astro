@@ -14,7 +14,7 @@ const [Firstname, setFirstname]=useState("");
 const [Lastname, setLastname]=useState(""); 
 const [Email, setEmail]=useState(""); 
 const [Birthday, setBirthday]=useState(""); 
-const [Password, setPassword]=useState(""); 
+const [Password, setPassword]=useState("");
 const [TermsCondi, setTermsCondi]=useState(false);
 const [showInfoTC, setShowInfoTC]= useState(false)
 const [errorTerms, setErrorTerms]= useState(false);
@@ -56,7 +56,14 @@ function register(e) {
   } else if (!TermsCondi){
     setErrorTerms(true)
   } else {
-    postUsers(Username, Firstname, Lastname, Email, Birthday, Password, "User")
+
+  /*Devuelve de forma completa la Fecha y Hora al back-end
+    const creationDateHour = new Date().toISOString(); */
+
+  /*toLocaleDateString("es-CR") devuelve unicamente la fecha local al back-end*/
+    const creationDate = new Date().toLocaleDateString("es-CR")
+    
+    postUsers(Username, Firstname, Lastname, Email, Birthday, Password, "User", creationDate)
     navigate ('/login')
   }
 }

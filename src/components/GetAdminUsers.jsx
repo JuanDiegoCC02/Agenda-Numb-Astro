@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getUsers, postUsers, updateUsers, deleteUsers } from '../services/llamadosUsers.js'
 import "../styles/GetAdminUsers.css"
+import GetUsersChart from './GetUsersChart.jsx';
 
 function GetAdminUsers() {
     const [users, setUsers]= useState([]);
@@ -48,7 +49,7 @@ function GetAdminUsers() {
             </ul>
         </div>
 
-       
+       <GetUsersChart/>
 
     </div>
   )

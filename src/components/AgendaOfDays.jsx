@@ -190,7 +190,7 @@ function deleteBtn(id) {
                     onClick={() =>{setTask(task);  setEditForTaskID(editForTaskID === task.id? null : task.id )}}>Edit</button>
                     {editForTaskID === task.id && 
                     <><br />
-                    <input type="text" onChange={newDateTask} placeholder='Task Day' className='SpaceEditTask' />
+                    <input type="date" onChange={newDateTask} placeholder='Task Day' className='SpaceEditTask' />
                     <input type="text" onChange={newTitleTask} placeholder='Task Title' className='SpaceEditTask' />
                     <input type="text" onChange={newDescriptionTask} placeholder='Task Description' className='SpaceEditTask' />
                    <button className='confirmEdit' onClick={() => editBtn(task.id)}>Uptade</button>

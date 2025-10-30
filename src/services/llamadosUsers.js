@@ -23,7 +23,7 @@ async function getUsers() {
 
 //////////LLAMADO POST//////////
 
-async function postUsers(userName, firstName, lastName, email, birthday, password, typeUser) {
+async function postUsers(userName, firstName, lastName, email, birthday, password, typeUser, creationDate) {
     try {
      
         const userData = { 
@@ -33,7 +33,8 @@ async function postUsers(userName, firstName, lastName, email, birthday, passwor
             email,
             birthday,
             password,
-            typeUser
+            typeUser,
+            creationDate
         
         };
 

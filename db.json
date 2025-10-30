@@ -8,7 +8,8 @@
       "email": "KillLil@gmail.com",
       "birthday": "10/14/2000",
       "password": "1234",
-      "typeUser": "User"
+      "typeUser": "User",
+      "creationDate": "2025-10-22T18:32:39.664Z"
     },
     {
       "id": "2244",
@@ -18,7 +19,30 @@
       "email": "JD16@astro.com",
       "birthday": "10/16/2004",
       "password": "444",
-      "typeUser": "admin"
+      "typeUser": "admin",
+      "creationDate": "2025-10-25T18:32:39.664Z"
+    },
+    {
+      "id": "7b10",
+      "userName": "Prueba",
+      "firstName": "Prueba",
+      "lastName": "PRueba",
+      "email": "Prb@gmail.com",
+      "birthday": "10/10/2010",
+      "password": "111",
+      "typeUser": "User",
+     "creationDate": "2025-10-29T18:32:39.664Z"
+    },
+    {
+      "id": "cf1c",
+      "userName": "PR",
+      "firstName": "PR",
+      "lastName": "PR",
+      "email": "PR@gmai.com",
+      "birthday": "10/10/2010",
+      "password": "111",
+      "typeUser": "User",
+      "creationDate": "2025-10-29T18:32:39.664Z"
     }
   ],
   "tasks": [
