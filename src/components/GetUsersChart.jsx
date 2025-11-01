@@ -1,90 +1,100 @@
-// ApexChart.jsx
+// UsersMonitoringChart.jsx
 import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { getUsers } from '../services/llamadosUsers';
 
+const UsersMonitoringChart = ({ title }) => {
+  const [chartState, setChartState] = useState({
+    series: [{ name: 'Users Log', data: [] }],
+    options: {
+      chart: {
+        type: 'area',
+        height: 350,
+        zoom: { enabled: false },
+        animations: { enabled: true },
+        background: 'rgba(24, 22, 22, 0.84)',
+        foreColor: '#faffaeff', 
+        
+      },
+  
+      colors: ['#fafc7ade'], 
+      dataLabels: { enabled: false },
+      stroke: { curve: 'straight' },
+       width: 2,
 
-const GetUsersChart = ({ title }) => {
-  const [chartData, setChartData] = useState({
-    series: [],
-    categories: [],
+      grid: {
+        borderColor: 'rgba(100, 51, 192, 1)',
+        row: { colors: ['#020599ff', 'transparent'], opacity: 0.2 },
+      },
+
+      fill: {
+        opacity: 0.8,
+        type: 'pattern',
+        pattern: { style: ['verticalLines', 'horizontalLines'], width: 5, height: 6 },
+      },
+
+      markers: { size: 5, hover: { size: 9 } },
+
+      title: { text: title || 'Users Log Chart',
+        style: { color: '#fcf2c9ff', fontSize: '14px' } },
+
+      tooltip: { intersect: true, shared: false },
+
+      theme: { palette: 'palette1' },
+
+      xaxis: { type: 'datetime', 
+        labels: {colors: '#f1e75a', fontSize: '13px'} },
+
+      yaxis: { title: { text: 'User Graph',align: 'center',
+      fontSize: '20px',
+      fontWeight: 'bold',
+       }, },
+      
+
+      
+    },
   });
 
   useEffect(() => {
-    async function list() {
+    async function loadUsers() {
       const datos = await getUsers();
-        console.log(datos)
-      // const de usuarios por fecha 
-      const conteoPorFecha = {};
+      if (!Array.isArray(datos)) return;
 
+      // group users by date
+      const countByDate = {};
       datos.forEach((user) => {
-        
-        const fecha = new Date(user.creationDate).toISOString().split('T')[0];
-        conteoPorFecha[fecha] = (conteoPorFecha[fecha] || 0) + 1;
+        const day = new Date(user.creationDate || user.date); 
+        if (isNaN(day)) return;
+        const dayStr = day.toISOString().split('T')[0];
+        countByDate[dayStr] = (countByDate[dayStr] || 0) + 1;
       });
 
-      // Orden y estructuracion de las fechas
-      const fechasOrdenadas = Object.keys(conteoPorFecha).sort();
-      const conteos = fechasOrdenadas.map((fecha) => conteoPorFecha[fecha]);
+      // data conversion [{x, y}]
+      const orderedDates = Object.keys(countByDate).sort();
+      const data = orderedDates.map((day) => ({
+        x: new Date(day).getTime(),
+        y: countByDate[day],
+      }));
 
-      setChartData({
-        series: [{ name: 'Usuarios registrados', data: conteos }],
-        categories: fechasOrdenadas,
-      });
+      setChartState((prev) => ({
+        ...prev,
+        series: [{ name: 'Users Log', data }],
+      }));
     }
-    
-    list();
+
+    loadUsers();
   }, []);
 
-const options = { chart: {
-    height: 350,
-    type: 'line', 
-    zoom: { enabled: false },
-    toolbar: { show: false }
-  },
-  colors: ['#eeff00f3'], 
-  dataLabels: { enabled: false },
-  stroke: {
-    curve: 'smooth',
-    width: 3
-  },
-
-  //Titulo del Grafico
-  title: { text: title || 'Users Log', align: 'center',
-    style: {
-      fontSize: '20px',
-      color: '#ffe56fff',
-      
-    }
-  },
-  grid: { borderColor: '#e1ff35ff',
-    row: {
-      colors: ['#b1a0078c', 'transparent'],
-      opacity: 0.4,
-    },
-  },
-
-  //Indica las categorias del grafico
-  xaxis: { categories: chartData.categories,
-    title: { text: 'Day the User was created', style: { color: '#f1e75aff' } },
-    labels: { style: { colors: '#fffd8bff' } }
-  },
-  yaxis: {
-    title: { text: 'Number Of Users', style: { color: '#e6e343ff', fontSize: "16px" } },
-    labels: { style: { colors: '#ffffffff' } }
-  },
-  tooltip: {
-    theme: 'light',
-    x: { format: 'dd-MM-yyyy' }
-  }
-};
-
-
   return (
-    <div className='grafico-usuarios-container'>
-      <ReactApexChart options={options} series={chartData.series} type="line" height={450}  />
+    <div>
+      <ReactApexChart
+        options={chartState.options}
+        series={chartState.series}
+        type="area"
+        height={350}
+      />
     </div>
   );
 };
 
-export default GetUsersChart;
+export default UsersMonitoringChart;

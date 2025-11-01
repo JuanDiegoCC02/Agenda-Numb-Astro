@@ -17,8 +17,6 @@ function BodyAdministration() {
             <li className={activeChange === "tasks"? "active-change":""} 
             onClick={()=> setActiveChange("tasks")} >Tasks</li>
 
-            <li className={activeChange === "comparativeTasks"? "active-change": ""}
-            onClick={()=> setActiveChange("comparativeTasks")}>Comparative Tasks</li>
         </ul>
     </div>
 

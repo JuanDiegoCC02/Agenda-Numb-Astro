@@ -24,7 +24,7 @@ const GetTasksCompletedAdmin = () => {
       },
       
       grid: {
-        borderColor: '#fbff00ff',
+        borderColor: '#74e3ffff',
         row: {
           colors: ['#000000ff', '#050116d2']
         }
@@ -102,3 +102,6 @@ const GetTasksCompletedAdmin = () => {
 };
 
 export default GetTasksCompletedAdmin;
+
+
+

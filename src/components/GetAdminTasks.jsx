@@ -1,89 +1,80 @@
-// ApexChart.jsx
+// AdminTasksChartSimple.jsx
 import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { getTasks } from '../services/llamadosTasks';
+import GetTasksCompletedAdmin from './GetTasksCompletedAdmin' 
 
-const GetAdminTasks = ({ title }) => {
-  const [chartData, setChartData] = useState({
-    series: [],
-    categories: [],
+const AdminTasksChartSimple = () => {
+  const [chartState, setChartState] = useState({
+    series: [{ name: 'Tasks Created', data: [] }],
+    options: {
+      chart: {
+        type: 'area',
+        height: 350,
+        zoom: { enabled: false },
+      },
+      dataLabels: { enabled: false },
+      stroke: { curve: 'straight' },
+      title: {
+        text: 'Tasks Analysis',
+        align: 'left',
+      },
+      subtitle: {
+        text: 'Tasks Created Over Time',
+        align: 'left',
+      },
+      labels: [],
+      xaxis: { type: 'datetime' },
+      yaxis: { opposite: true },
+      legend: { horizontalAlign: 'left' },
+    },
   });
 
   useEffect(() => {
-    async function list() {
+    async function loadTasks() {
       const datos = await getTasks();
-        console.log(datos)
-      // const de usuarios por fecha 
-      const conteoPorFecha = {};
+      if (!Array.isArray(datos)) return;
 
+      // Agrupar tareas por fecha
+      const conteoPorFecha = {};
       datos.forEach((task) => {
-        
-        const fecha = new Date(task.taskDay).toISOString().split('T')[0];
-        conteoPorFecha[fecha] = (conteoPorFecha[fecha] || 0) + 1;
+        const fecha = new Date(task.taskDay || task.date); // Ajusta según tu db.json
+        if (isNaN(fecha)) return;
+        const fechaStr = fecha.toISOString().split('T')[0];
+        conteoPorFecha[fechaStr] = (conteoPorFecha[fechaStr] || 0) + 1;
       });
 
-      // Orden y estructuracion de las fechas
+      // Ordenar fechas
       const fechasOrdenadas = Object.keys(conteoPorFecha).sort();
-      const conteos = fechasOrdenadas.map((fecha) => conteoPorFecha[fecha]);
 
-      setChartData({
-        series: [{ name: 'Usuarios registrados', data: conteos }],
-        categories: fechasOrdenadas,
+      // Generar arrays para ApexChart
+      const data = fechasOrdenadas.map((fecha) => conteoPorFecha[fecha]);
+      const labels = fechasOrdenadas.map((fecha) => new Date(fecha).toISOString());
+
+      setChartState({
+        series: [{ name: 'Tasks Created', data }],
+        options: { ...chartState.options, labels },
       });
     }
-    
-    list();
+
+    loadTasks();
   }, []);
 
-const options = { chart: {
-    height: 350,
-    type: 'line', 
-    zoom: { enabled: false },
-    toolbar: { show: false }
-  },
-  colors: ['#42ebf7ff'], 
-  dataLabels: { enabled: false },
-  stroke: {
-    curve: 'smooth',
-    width: 3
-  },
-
-  //Titulo del Grafico
-  title: { text: title || 'Tasks Log', align: 'center',
-    style: {
-      fontSize: '20px',
-      color: '#e1dcffff',
-      
-    }
-  },
-  grid: { borderColor: '#25d1c9ff',
-    row: {
-      colors: ['#000000ff', 'transparent'],
-      opacity: 0.4,
-    },
-  },
-
-  //Indica las categorias del grafico
-  xaxis: { categories: chartData.categories,
-    title: { text: 'Day the Task was created', style: { color: '#aee5ffe5' } },
-    labels: { style: { colors: '#b3b3b3ff' } }
-  },
-  yaxis: {
-    title: { text: 'Number Of Tasks', style: { color: '#b4b3ffff', fontSize: "16px" } },
-    labels: { style: { colors: '#7eecffff' } }
-  },
-  tooltip: {
-    theme: 'light',
-    x: { format: 'dd-MM-yyyy' }
-  }
-};
-
-
   return (
-    <div className='grafico-usuarios-container'>
-      <ReactApexChart options={options} series={chartData.series} type="line" height={450}  />
+  <div>
+    <div>
+      <ReactApexChart
+        options={chartState.options}
+        series={chartState.series}
+        type="area"
+        height={350}
+      />
+    </div><br /><br />
+    <div><br /><br />
+      <GetTasksCompletedAdmin/>
     </div>
+ </div>
   );
 };
 
-export default GetAdminTasks;
+export default AdminTasksChartSimple;

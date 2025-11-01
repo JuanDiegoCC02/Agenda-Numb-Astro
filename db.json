@@ -31,7 +31,7 @@
       "birthday": "10/10/2010",
       "password": "111",
       "typeUser": "User",
-     "creationDate": "2025-10-29T18:32:39.664Z"
+      "creationDate": "2025-10-29T18:32:39.664Z"
     },
     {
       "id": "cf1c",
@@ -43,6 +43,50 @@
       "password": "111",
       "typeUser": "User",
       "creationDate": "2025-10-29T18:32:39.664Z"
+    },
+    {
+      "id": "8626",
+      "userName": "Prueba 02",
+      "firstName": "prueba02",
+      "lastName": "prueba02",
+      "email": "prueba02gmail.com",
+      "birthday": "17/6/2025",
+      "password": "111",
+      "typeUser": "User",
+      "creationDate": "2025-10-31T01:02:31.716Z"
+    },
+    {
+      "id": "2460",
+      "userName": "Pop de prueba",
+      "firstName": "pop prueba",
+      "lastName": "pop PRUEBA",
+      "email": "pop@gmail.prueba",
+      "birthday": "15/8/2025",
+      "password": "555",
+      "typeUser": "User",
+      "creationDate": "2025-11-01T01:02:31.716Z"
+    },
+    {
+      "id": "2461",
+      "userName": "fuck de prueba",
+      "firstName": "fuck prueba",
+      "lastName": "fuck PRUEBA",
+      "email": "fuck@gmail.prueba",
+      "birthday": "15/8/2025",
+      "password": "555",
+      "typeUser": "User",
+      "creationDate": "2025-11-01T01:01:31.716Z"
+    },
+    {
+      "id": "2df4",
+      "userName": "Keloke",
+      "firstName": "keloke",
+      "lastName": "keloke",
+      "email": "kelokegmail.com",
+      "birthday": "10/10/2002",
+      "password": "555",
+      "typeUser": "User",
+      "creationDate": "2025-11-01T01:50:08.216Z"
     }
   ],
   "tasks": [

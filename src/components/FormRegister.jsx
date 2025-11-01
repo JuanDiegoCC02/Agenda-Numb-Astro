@@ -57,11 +57,11 @@ function register(e) {
     setErrorTerms(true)
   } else {
 
-  /*Devuelve de forma completa la Fecha y Hora al back-end
-    const creationDateHour = new Date().toISOString(); */
+  /*Devuelve de forma completa la Fecha y Hora al back-end */
+    const creationDate = new Date().toISOString();
 
-  /*toLocaleDateString("es-CR") devuelve unicamente la fecha local al back-end*/
-    const creationDate = new Date().toLocaleDateString("es-CR")
+  /*toLocaleDateString("es-CR") devuelve unicamente la fecha local al back-end
+    const creationDateLocalCR = new Date().toLocaleDateString("es-CR")*/
     
     postUsers(Username, Firstname, Lastname, Email, Birthday, Password, "User", creationDate)
     navigate ('/login')
