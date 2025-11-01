@@ -35,11 +35,11 @@ function GetAdminUsers() {
                 {users.map(user => (
                 <li className='liUser' key={user.id}>
                     <h5 className='titleUsername'>{user.userName}</h5>
-                    <span className='InfoUser'>  {user.firstName} </span><br />
-                    <span className='InfoUser'>  {user.lastName} </span><br />
-                    <span className='InfoUser'> {user.email} </span><br />
-                    <span className='InfoUser'> {user.birthday} </span><br />
-                    <span className='InfoUser'> {user.typeUser} </span><br />
+                    <span className='InfoUser'>  {user.firstName} </span>
+                    <span className='InfoUser'>  {user.lastName} </span>
+                    <span className='InfoUser'> {user.email} </span>
+                    <span className='InfoUser'> {user.birthday} </span>
+                    <span className='InfoUser'> {user.typeUser} </span>
                      <div className='InfoUser'>
                       <button className='btnDeleteUser' onClick={()=> userDelete (user.id)}>delete</button>
                      </div>
