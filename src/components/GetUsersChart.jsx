@@ -94,6 +94,7 @@ const GetUsersChart = ({ title }) => {
       setChartState((prev) => ({
         ...prev,
         series: [{ name: "Users Log", data }],
+
       }));
     }
 
@@ -188,7 +189,7 @@ const GetUsersChart = ({ title }) => {
           background-color: rgba(0, 0, 0, 0.9) !important;
         }
         .apexcharts-menu-item {
-          color: #eafabfff !important;
+          color: #ecee72ff !important;
         }
       `}</style>
     </div>

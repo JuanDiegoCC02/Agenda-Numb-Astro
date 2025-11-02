@@ -12,15 +12,30 @@ const AdminTasksChartSimple = () => {
         type: 'area',
         height: 350,
         zoom: { enabled: false },
+        animations: { enabled: true },
+        background: "rgba(0, 0, 0, 1)",
+        foreColor: "#98e7ffff", 
+        toolbar: { show: true },
       },
+
       dataLabels: { enabled: false },
       stroke: { curve: 'straight' },
+      
+      grid: {
+        borderColor: "rgba(144, 172, 173, 0.9)",
+        row: { colors: [  "#2e3236ff", "transparent"], opacity: 0.2 },
+      },
+      colors:["hsla(216, 100%, 76%, 0.99)"],
+
+      
       title: {
-        text: 'Tasks Analysis',
-        align: 'left',
+        text: 'Tasks Creation Chart',
+        align: 'center',
+        style: { color: "#b5e5ffff", fontSize: "22px" },
+        
       },
       subtitle: {
-        text: 'Tasks Created Over Time',
+        text: 'User task creation log chart',
         align: 'left',
       },
       labels: [],
@@ -35,21 +50,21 @@ const AdminTasksChartSimple = () => {
       const datos = await getTasks();
       if (!Array.isArray(datos)) return;
 
-      // Agrupar tareas por fecha
-      const conteoPorFecha = {};
+      
+      const countByDate = {};
       datos.forEach((task) => {
-        const fecha = new Date(task.taskDay || task.date); // Ajusta según tu db.json
-        if (isNaN(fecha)) return;
-        const fechaStr = fecha.toISOString().split('T')[0];
-        conteoPorFecha[fechaStr] = (conteoPorFecha[fechaStr] || 0) + 1;
+        const day = new Date(task.taskDay || task.date); 
+        if (isNaN(day)) return;
+        const fechaStr = day.toISOString().split('T')[0];
+        countByDate[fechaStr] = (countByDate[fechaStr] || 0) + 1;
       });
 
-      // Ordenar fechas
-      const fechasOrdenadas = Object.keys(conteoPorFecha).sort();
+    
+      const sortedByDate = Object.keys(countByDate).sort();
 
-      // Generar arrays para ApexChart
-      const data = fechasOrdenadas.map((fecha) => conteoPorFecha[fecha]);
-      const labels = fechasOrdenadas.map((fecha) => new Date(fecha).toISOString());
+    
+      const data = sortedByDate.map((day) => countByDate[day]);
+      const labels = sortedByDate.map((day) => new Date(day).toISOString());
 
       setChartState({
         series: [{ name: 'Tasks Created', data }],
@@ -62,6 +77,9 @@ const AdminTasksChartSimple = () => {
 
   return (
   <div>
+      <div className='containerTitleUsers'>
+        <h4 className='titleUsers'>Tasks</h4>
+      </div>
     <div>
       <ReactApexChart
         options={chartState.options}
@@ -70,6 +88,8 @@ const AdminTasksChartSimple = () => {
         height={350}
       />
     </div><br /><br />
+
+    {/*Tasks graph comparation*/}
     <div><br /><br />
       <GetTasksCompletedAdmin/>
     </div>

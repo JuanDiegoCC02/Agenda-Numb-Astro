@@ -24,36 +24,36 @@ const GetTasksCompletedAdmin = () => {
       },
       
       grid: {
-        borderColor: '#74e3ffff',
+        borderColor: '#03020fff',
         row: {
-          colors: ['#000000ff', '#050116d2']
+          colors: ['#000000ff', '#242121c7']
         }
       },
 
       xaxis: {
         labels: {
           rotate: -45,
-          style: { colors: '#f5f854fa' }
+          style: { colors: '#a4a1c2fa' }
         },
         categories: [
-          'Completed', 'Pending'],
+          'Tasks Completed', 'Tasks Pending'],
       },
 
       yaxis: {
         title: {
-          text: 'Number of Tasks',
-          style: { color: '#24eeeeff', fontSize: "16px"}
+          text: 'Tasks Comparison Chart',
+          style: { color: '#24eeeeff', fontSize: "19px"}
         },
         labels: { style: { colors: '#ccc' } }
       },
-       colors: ['#0bdfeeda', '#ffffffff'],
+       colors: ['#5eabf8f8', '#ffffffff'],
       fill: {
         type: 'gradient',
         gradient: {
           shade: 'dark',
           type: "horizontal",
           shadeIntensity: 0.25,
-          gradientToColors: ['#0d136477'],
+          gradientToColors: ['#0c0430ff'],
           inverseColors: true,
           opacityFrom: 0.9,
           opacityTo: 0.9,
@@ -90,7 +90,7 @@ const GetTasksCompletedAdmin = () => {
   return (
     <div className="bg-[#0e0e1a] p-6 rounded-2xl shadow-lg">
    
-      <h4> Task comparison chart </h4>
+      
       <ReactApexChart
         options={state.options}
         series={state.series}
