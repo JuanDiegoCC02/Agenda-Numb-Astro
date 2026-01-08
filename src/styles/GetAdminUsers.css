@@ -1,4 +1,3 @@
-
 .containerTitleUsers {
   text-align: center;
   margin-bottom: 20px;
@@ -13,7 +12,6 @@
   display: inline-block;
   padding-bottom: 6px;
 }
-
 
 .containerInfoUser {
   display: flex;
@@ -30,7 +28,6 @@
   max-width: 970px;
   padding: 0;
 }
-
 
 .liUser {
   background: rgba(0, 0, 0, 0.603);
@@ -49,11 +46,9 @@
   border-color: rgba(251, 255, 0, 0.74);
 }
 
-/* ====== INFORMACIÓN DEL USUARIO ====== */
 .titleUsername {
   font-size: 1.2rem;
   color: #ecedf5cb;
-  
   text-shadow: 0 0 6px #597afff1;
   border-bottom: 1px solid rgb(0, 140, 255);
 }
@@ -65,7 +60,7 @@
   margin: 22px;
 }
 
-/* ====== BOTÓN ELIMINAR ====== */
+
 .btnDeleteUser {
   margin-top: 10px;
   background: #a50b0b;
@@ -76,7 +71,6 @@
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  
 }
 
 .btnDeleteUser:hover {
@@ -85,7 +79,76 @@
   box-shadow: 0 0 15px rgba(255, 17, 17, 0.651);
 }
 
-/* ====== RESPONSIVE ====== */
+
+.btnEditUser {
+  margin-top: 10px;
+  background: rgba(0, 255, 255, 0.1);
+  color: #00fff7; 
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  font-weight: 700;
+  backdrop-filter: blur(3px); 
+}
+
+.btnEditUser:hover {
+  background: rgba(0, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00fff7;
+}
+
+.btnEditUser[aria-expanded="true"] {
+  background: #666666; 
+  border-color: #2b2b2b;
+  color: #fff;
+  box-shadow: none;
+}
+
+/* INPUTS DE EDICIÓN */
+.inpEditUser {
+  width: calc(100% - 20px);
+  padding: 9px 12px;
+  margin: 6px 0;
+  border: 1px solid #00fff7; 
+  border-radius: 4px;
+  background: #000000;
+  color: #e8f7ff;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inpEditUser:focus {
+  outline: none;
+  border-color: #008cff;
+  box-shadow: 0 0 8px rgba(0, 140, 255, 0.5);
+}
+
+.btnSaveEdit {
+  width: 100%;
+  margin-top: 12px;
+  background: #008cff; 
+  color: #e8f7ff;
+  border: 2px solid #00fff7;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSaveEdit:hover {
+  background: #00bfff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 140, 255, 0.6);
+}
+
+/* RESPONSIVE */
 @media (max-width: 600px) {
   .ulUser {
     grid-template-columns: 1fr;
@@ -94,5 +157,14 @@
 
   .liUser {
     padding: 15px;
+  }
+  
+  .btnEditUser {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+  }
+  
+  .btnDeleteUser {
+    width: calc(50% - 5px);
   }
 }
