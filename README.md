@@ -1,12 +1,23 @@
-# React + Vite
+Web Site Agenda Numb Astro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-->Description:
+Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.
+Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users.
 
-Currently, two official plugins are available:
+-->Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-->Technologies: 
+
+
+
+-->Installation:
+//"clone the repository" git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git] cd Numb-Astro 
+//"package installations" npm install 
+//"start website" npm run dev, npm run backend
+
+
+-->Credits: 
+Title: Agenda Numb Astro  
+Author: Juan Diego Corella Camacho
