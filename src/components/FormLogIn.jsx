@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
 import { getUsers, postUsers, updateUsers, deleteUsers } from '../services/llamadosUsers.js'
+import { useCookies } from 'react-cookie'
 import LogoNA from '../imagenes/LogoNA.png'
 import "../styles/FormLogIn.css"
 import ErrorCredentialsModal from './Modals/ErrorCredentialsModal.jsx'
@@ -10,6 +11,7 @@ function FormLogIn() {
     const [Password, setPassword]=useState("");
     const [UsersDatas, setUsersDatas]=useState([]);
     const [errorCredentials, setErrorCredentials]= useState(false)
+    const [, setCookie] = useCookies (["user"])
     const Navigate = useNavigate ()
 
     useEffect(()=>{
@@ -28,6 +30,8 @@ function FormLogIn() {
     }
     function enter() {
         const found = UsersDatas.find(UserData => UserData.userName===Username && UserData.password===Password)
+        const cookieOptions = {path: "/", maxAge: 8640000};
+        //division de acceso para compresion de proceso interno back-end
         if (found && found.typeUser === "User") {
             localStorage.setItem("Username", found.userName)
             localStorage.setItem("Firstname", found.firstName)
@@ -36,6 +40,14 @@ function FormLogIn() {
             localStorage.setItem("Birthday", found.birthday)
             localStorage.setItem("ID", found.id)
             localStorage.setItem("TypeUser", found.typeUser)
+
+            setCookie("Username", found.userName,cookieOptions)
+            setCookie("Firstname", found.firstName,cookieOptions)
+            setCookie("Lastname", found.lastName,cookieOptions)
+            setCookie("Email", found.email,cookieOptions)
+            setCookie("Birthday", found.birthday,cookieOptions)
+            setCookie("ID", found.id,cookieOptions)
+            setCookie("TypeUser", found.typeUser,cookieOptions)
             Navigate ('/')
 
         } else if (found && found.typeUser ==="admin") {
@@ -46,6 +58,14 @@ function FormLogIn() {
             localStorage.setItem("Birthday", found.birthday)
             localStorage.setItem("ID", found.id)
             localStorage.setItem("TypeUser", found.typeUser)
+
+            setCookie("Username", found.userName,cookieOptions)
+            setCookie("Firstname", found.firstName,cookieOptions)
+            setCookie("Lastname", found.lastName,cookieOptions)
+            setCookie("Email", found.email,cookieOptions)
+            setCookie("Birthday", found.birthday,cookieOptions)
+            setCookie("ID", found.id,cookieOptions)
+            setCookie("TypeUser", found.typeUser,cookieOptions)
             Navigate ('/')
         } else {
             setErrorCredentials(true)
