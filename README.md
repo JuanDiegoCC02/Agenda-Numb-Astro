@@ -1,8 +1,9 @@
 Web Site Agenda Numb Astro
 
--->Description:
-Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.  <BR>
-Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users.
+-->Description:  <BR>
+- Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.  <BR>
+- Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users. <BR>
+<HR>
 
 -->Features: <BR>
 - User and Habit Management System (CRUD): A complete system for creating, reading, updating, and deleting habits and users in real time, synchronized with a dynamic simulated database -(db.json) via a JSON server. <BR>
@@ -12,6 +13,7 @@ Developed with React, it implements a complete CRUD system with admin tables for
 - Session Storage and Validation: User session management using LocalStorage and Cookies, maintaining authentication status and protecting user data. <BR>
 - Asynchronous data handling: RESTful API consumption via a JSON server with load status and error handling. <BR>
 - Responsive user interface: Responsive design that ensures seamless use on mobile and desktop devices. <BR>
+<HR>
 
 -->Technologies: 
 - Languages: <BR>
@@ -36,12 +38,17 @@ Developed with React, it implements a complete CRUD system with admin tables for
   -Figma: User interface (UI/UX) design tools. <BR>
   -Trello: Project and task management using Agile methodologies. <BR>
   -Slack: Team communication and collaboration. <BR>
+<HR>
 
 -->Installation: <BR>
-//"clone the repository" <BR> git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git] cd Numb-Astro  <BR>
-//"package installations" <BR> npm install  <BR>
-//"start website" <BR> npm run dev, npm run backend <BR>
+  //"clone the repository" <BR> 
+- git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git] cd Numb-Astro  <BR>
+  //"package installations" <BR> 
+- npm install  <BR>
+  //"start website" <BR> 
+- npm run dev, npm run backend <BR>
+<HR>
 
 -->Credits:  <BR>
-Title: Agenda Numb Astro   <BR>
-Author: Juan Diego Corella Camacho <BR>
+- Title: Agenda Numb Astro   <BR>
+- Author: Juan Diego Corella Camacho <BR>
