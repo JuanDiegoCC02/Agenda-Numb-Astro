@@ -2,7 +2,7 @@ Web Site Agenda Numb Astro
 
 -->Description:  <BR>
 - Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.  <BR>
-- Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users. <BR>
+- Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users. 
 <HR>
 
 -->Features: <BR>
@@ -12,7 +12,7 @@ Web Site Agenda Numb Astro
 - Advanced Form Validation: Structured and validated forms for user registration and habit creation, ensuring data integrity before persistence in the system. <BR>
 - Session Storage and Validation: User session management using LocalStorage and Cookies, maintaining authentication status and protecting user data. <BR>
 - Asynchronous data handling: RESTful API consumption via a JSON server with load status and error handling. <BR>
-- Responsive user interface: Responsive design that ensures seamless use on mobile and desktop devices. <BR>
+- Responsive user interface: Responsive design that ensures seamless use on mobile and desktop devices. 
 <HR>
 
 -->Technologies: 
@@ -37,7 +37,7 @@ Web Site Agenda Numb Astro
 - Design & Collaboration: <BR>
   -Figma: User interface (UI/UX) design tools. <BR>
   -Trello: Project and task management using Agile methodologies. <BR>
-  -Slack: Team communication and collaboration. <BR>
+  -Slack: Team communication and collaboration. 
 <HR>
 
 -->Installation: <BR>
@@ -46,7 +46,7 @@ Web Site Agenda Numb Astro
   //"package installations" <BR> 
 - npm install  <BR>
   //"start website" <BR> 
-- npm run dev, npm run backend <BR>
+- npm run dev & npm run backend 
 <HR>
 
 -->Credits:  <BR>
