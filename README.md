@@ -17,7 +17,8 @@ Web Site Agenda Numb Astro
 
 -->Technologies: 
 - Languages: <BR>
-  -HTML5 & CSS3: Structure and visual design. <BR>
+  -HTML5 : Structure. <BR>
+  -CSS3: Visual design. <BR>
   -JavaScript: Programming logic. <BR>
 
 - Frameworks & Libraries: <BR>
@@ -41,11 +42,11 @@ Web Site Agenda Numb Astro
 <HR>
 
 -->Installation: <BR>
-    //"clone the repository" <BR> 
+//"clone the repository" <BR> 
 - git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git] cd Numb-Astro  <BR>
-     //"package installations" <BR> 
+//"package installations" <BR> 
 - npm install  <BR>
-     //"start website" <BR> 
+//"start website" <BR> 
 - npm run dev & npm run backend 
 <HR>
 
