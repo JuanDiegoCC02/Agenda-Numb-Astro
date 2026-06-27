@@ -45,7 +45,8 @@
 
 # 🔧 Installation: <BR>
 //"clone the repository" <BR> 
-- git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git] cd Numb-Astro  <BR>
+- git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git]<BR>
+- cd Numb-Astro  <BR>
 //"package installations" <BR> 
 - npm install  <BR>
 //"start website" <BR> 
