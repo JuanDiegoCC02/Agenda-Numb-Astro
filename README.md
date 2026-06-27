@@ -39,17 +39,19 @@
 - Design & Collaboration: <BR>
   -Figma: User interface (UI/UX) design tools. <BR>
   -Trello: Project and task management using Agile methodologies. <BR>
-  -Slack: Team communication and collaboration. 
-<HR>
+  -Slack: Team communication and collaboration.
 
--->Installation: <BR>
+---
+
+# 🔧 Installation: <BR>
 //"clone the repository" <BR> 
 - git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git] cd Numb-Astro  <BR>
 //"package installations" <BR> 
 - npm install  <BR>
 //"start website" <BR> 
 - npm run dev & npm run backend 
-<HR>
+
+---
 
 -->Credits:  <BR>
 - Title: Agenda Numb Astro   <BR>
