@@ -14,11 +14,9 @@
 - Asynchronous data handling: RESTful API consumption via a JSON server with load status and error handling. <BR>
 - Responsive user interface: Responsive design that ensures seamless use on mobile and desktop devices. 
 
-
 ---
 
-
--->Technologies: 
+# 🏗️ Technologies: 
 - Languages: <BR>
   -HTML5 : Structure. <BR>
   -CSS3: Visual design. <BR>
