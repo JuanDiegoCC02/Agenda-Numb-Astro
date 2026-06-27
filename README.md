@@ -1,7 +1,21 @@
 # 🌐 Agenda Numb Astro
 
 - Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.  <BR>
-- Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users. 
+- Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users.
+
+```md
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JSON Server](https://img.shields.io/badge/JSON_Server-Mock_API-black)
+![ApexCharts](https://img.shields.io/badge/ApexCharts-Data_Visualization-00BFFF)
+![React Router](https://img.shields.io/badge/React_Router-Navigation-CA4245?logo=reactrouter&logoColor=white)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-Session_Management-orange)
+![REST API](https://img.shields.io/badge/REST-API-green)
+![Responsive](https://img.shields.io/badge/Responsive-UI-success)
+```
+
 
 ---
 
