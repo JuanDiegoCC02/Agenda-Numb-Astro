@@ -3,9 +3,9 @@
 - Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.  <BR>
 - Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users. 
 
-===
+---
 
--->Features: <BR>
+# 🗂️ Features: 
 - User and Habit Management System (CRUD): A complete system for creating, reading, updating, and deleting habits and users in real time, synchronized with a dynamic simulated database -(db.json) via a JSON server. <BR>
 - Incentive Progression System: A space-themed incentive system where users earn stars on a star map, unlock star memories as rewards, and gain profile titles upon leveling up, reinforcing consistency and long-term participation. <BR>
 - Data Visualization Dashboard: Integration with ApexCharts to transform flat data into interactive charts, enabling clear and accessible analysis. <BR>
@@ -13,7 +13,10 @@
 - Session Storage and Validation: User session management using LocalStorage and Cookies, maintaining authentication status and protecting user data. <BR>
 - Asynchronous data handling: RESTful API consumption via a JSON server with load status and error handling. <BR>
 - Responsive user interface: Responsive design that ensures seamless use on mobile and desktop devices. 
-<HR>
+
+
+---
+
 
 -->Technologies: 
 - Languages: <BR>
