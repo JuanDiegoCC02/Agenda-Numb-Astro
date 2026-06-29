@@ -28,12 +28,12 @@
 ---
 
 # 🏗️ Technologies
-- Languages 
+- Languages <BR>
   -HTML5 : Structure. <BR>
   -CSS3: Visual design. <BR>
   -JavaScript: Programming logic. <BR>
 
-- Frameworks & Libraries
+- Frameworks & Libraries <BR>
   -React: Main library for the user interface. <BR>
   -React Router: Library for managing navigation and URL routes. <BR>
   -ApexCharts: Library for data visualization and interactive charts. <BR>
@@ -43,11 +43,11 @@
   -db.json: Document database for project prototyping. <BR>
   -Local Storage & Cookies: Data storage and session management in the browser. <BR>
 
-- Development Tools
+- Development Tools <BR>
   -VS Code: Main code editor. <BR>
   -GitHub: Version control and code hosting. <BR>
 
-- Design & Collaboration
+- Design & Collaboration <BR>
   -Figma: User interface (UI/UX) design tools. <BR>
   -Trello: Project and task management using Agile methodologies. <BR>
   -Slack: Team communication and collaboration.
