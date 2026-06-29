@@ -27,7 +27,7 @@
 
 ---
 
-# 🏗️ Technologies
+# 🛠️ Technologies
 - Languages <BR>
   -HTML5 : Structure. <BR>
   -CSS3: Visual design. <BR>
