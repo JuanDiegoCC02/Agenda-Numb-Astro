@@ -1,4 +1,4 @@
-# 🌐 Agenda Numb Astro
+# 📓​ Agenda Numb Astro
 
 - Numb Astro is a personal development web application focused on creating and tracking new habits through an incentive system inspired by space travel. As part of this incentive system, users receive stars on a star map, unlock stellar memories, and earn titles at each level as they progress in their habits, promoting consistency and personal growth.  <BR>
 - Developed with React, it implements a complete CRUD system with admin tables for managing habits and users, as well as visualizing metrics through interactive charts, using ApexCharts for accessible analysis. It features a simulated backend with a JSON server and is structured in JSON format for data management. Furthermore, it integrates session validation and storage using LocalStorage /Cookies, ensuring privacy and structured control for users.
