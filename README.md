@@ -16,7 +16,7 @@
 
 ---
 
-# 🗂️ Features: 
+# 🗂️ Features
 - User and Habit Management System (CRUD): A complete system for creating, reading, updating, and deleting habits and users in real time, synchronized with a dynamic simulated database -(db.json) via a JSON server. <BR>
 - Incentive Progression System: A space-themed incentive system where users earn stars on a star map, unlock star memories as rewards, and gain profile titles upon leveling up, reinforcing consistency and long-term participation. <BR>
 - Data Visualization Dashboard: Integration with ApexCharts to transform flat data into interactive charts, enabling clear and accessible analysis. <BR>
@@ -27,7 +27,7 @@
 
 ---
 
-# 🏗️ Technologies: 
+# 🏗️ Technologies
 - Languages: <BR>
   -HTML5 : Structure. <BR>
   -CSS3: Visual design. <BR>
@@ -54,7 +54,7 @@
 
 ---
 
-# 🔧 Installation: <BR>
+# 🔧 Installation
 - "clone the repository" <BR> 
 -git clone [https://github.com/JuanDiegoCC02/Agenda-Numb-Astro.git]<BR>
 -cd Numb-Astro  <BR>
@@ -65,6 +65,6 @@
 
 ---
 
-# 🧑‍💻 Credits:  <BR>
+# 🧑‍💻 Credits
 - Title: Agenda Numb Astro   <BR>
 - Author: Juan Diego Corella Camacho <BR>
