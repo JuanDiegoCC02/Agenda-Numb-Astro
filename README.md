@@ -38,7 +38,7 @@
   -React Router: Library for managing navigation and URL routes. <BR>
   -ApexCharts: Library for data visualization and interactive charts. <BR>
 
-- Backend & Storage: Data storage and synchronization
+- Backend & Storage: Data storage and synchronization <BR>
   -JSON Server: Mock backend to simulate a REST API. <BR>
   -db.json: Document database for project prototyping. <BR>
   -Local Storage & Cookies: Data storage and session management in the browser. <BR>
